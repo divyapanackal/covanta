@@ -1727,11 +1727,11 @@ main.assignment-wrap {
   height: 16px;
   display: inline-block;
 }
-.assignment-wrap-save .tab-filter-info .row h2 {
+.add .assignment-wrap-save .tab-filter-info .row h2 {
   font: 1.4rem/20px "Manrope-SemiBold";
   margin-top: 1.6rem;
 }
-.assignment-wrap-save .tab-filter-info .row h2 strong {
+.add .assignment-wrap-save .tab-filter-info .row h2 strong {
   font: 2rem/20px "Manrope-SemiBold";
 }
 .txt-company-assnmt {
@@ -1800,6 +1800,31 @@ main.assignment-wrap {
 .alert-popup.modal .modal-header  {
   box-shadow: none;
 }
+.add .assignment-wrap-add-box,
+.assignment-wrap-save-box {
+  display: none;
+}
+.add .assignment-wrap-save-box {
+  display: block;
+}
+/*sweet alert*/
+.swal2-title {
+  color: #32425f;
+  font: 1.6rem Manrope-Medium;
+ }
+ .swal2-html-container {
+   font-size: 1.4rem;
+ }
+ .swal2-popup {
+   max-width: 40rem;
+   width: 100%;
+ }
+ .swal2-container button {
+  font: 1.4rem Manrope-Semibold !important;
+  text-align: center;
+  text-transform: none;
+  border-radius: 8px;
+ }
 /*................................................
     8. MEDIA QUERIES
 .................................................*/

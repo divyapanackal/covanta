@@ -136,6 +136,7 @@ $(document).ready(function () {
   $(".calender-popup #show-all").click(function () {
     if ($(this).is(":checked")) {
       $(".calender-popup").addClass("chk-box-all"); // checked
+      $(".week-picker-contactor .week-picker-contract").text('All Unreviewed');
     } else {
       $(".calender-popup").removeClass("chk-box-all"); // unchecked
     }
@@ -177,4 +178,23 @@ $(document).ready(function () {
     }
   });
   $('.day-night-chk input[type="radio"].toggle:checked').addClass("checked");
+
+  $('.btn-time-add').click(function(e) {
+    e.preventDefault();
+    $('.assignment-wrap').addClass('add');
+  });
+  $('.ico-back').click(function(e) {
+    e.preventDefault();
+    $('.assignment-wrap').removeClass('add');
+  });
+
+  /**
+   * Sweetalert
+   */
+  $('.alert-ss').click(function(){
+    Swal.fire({
+      title: 'Sample',
+      text: 'Something went wrong!',
+    })
+  })
 });
