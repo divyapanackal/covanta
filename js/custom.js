@@ -136,6 +136,7 @@ $(document).ready(function () {
   $(".calender-popup #show-all").click(function () {
     if ($(this).is(":checked")) {
       $(".calender-popup").addClass("chk-box-all"); // checked
+      $(".week-picker-contactor .week-picker-contract").text('All Unreviewed');
     } else {
       $(".calender-popup").removeClass("chk-box-all"); // unchecked
     }
