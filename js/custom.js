@@ -133,6 +133,10 @@ $(document).ready(function () {
     }
   });
 
+  $(".calender-popup").click(function(e){
+    e.stopPropagation();
+  });
+
   $(".calender-popup #show-all").click(function () {
     if ($(this).is(":checked")) {
       $(".calender-popup").addClass("chk-box-all"); // checked
@@ -178,4 +182,49 @@ $(document).ready(function () {
     }
   });
   $('.day-night-chk input[type="radio"].toggle:checked').addClass("checked");
+
+  $('.btn-time-add').click(function(e) {
+    e.preventDefault();
+    $('.assignment-wrap').addClass('add');
+  });
+  $('.ico-back').click(function(e) {
+    e.preventDefault();
+    $('.assignment-wrap').removeClass('add');
+  });
+
+  if (window.location.href.indexOf("Asignment") > -1) {
+    if ($('.header-menu li a:contains("Assignment")')) {
+      $('.header-menu li a:contains("Assignment")').addClass('active');
+    }
+  }
+  if (window.location.href.indexOf("Employee") > -1) {
+    if ($('.header-menu li a:contains("Timecard")')) {
+      $('.header-menu li a:contains("Timecard")').addClass('active');
+    }
+  }
+
+
+  /**
+   * Data Tables
+   */
+
+  var table = $('#example').DataTable({
+    "searching": false,
+    "info": false,
+    "lengthChange": false,
+    "paging": false,
+    scrollY: 500,
+    'columnDefs': [ {
+      'targets': [2,3,4,5,6], /* column index */
+      'orderable': false, /* true or false */
+   }]
+  });
+
+  $('#example tbody').on('click', '.lnk-user-edit', function() {
+    $('#user-edit').modal('show'); 
+  });
+  $('#example tbody').on('click', '.lnk-pass-change', function() {
+    $('#pass-change').modal('show'); 
+  });
+
 });

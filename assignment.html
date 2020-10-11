@@ -24,7 +24,7 @@
                         <div class="menu-wrap d-none d-md-block ">
                             <ul class="header-menu d-flex">
                                 <li><a href="employee.html">Timecard</a></li>
-                                <li><a href="assignment.html" class="active">Assignment</a></li>
+                                <li><a href="assignment.html">Assignment</a></li>
                             </ul>
                         </div>
                         <span class="d-flex help-btn ml-3"><i class="ico-help"></i></span>                        
@@ -37,10 +37,10 @@
                       </div>  
                 </div>
             </header>
-            <main class="assignment-wrap assignment-wrap-add">
+            <main class="assignment-wrap">
                 <div class="container-fluid main-container">
-                    <div class="tab-filter row pt-3 mb-3">
-                        <div class="col-md-12 flex-column flex-md-row d-flex justify-content-end pt-4">
+                    <div class="tab-filter row pt-3 mb-3 justify-content-end ">
+                        <div class="col-md-6 flex-column flex-md-row d-flex pt-4">
                             <div class="select mr-md-3">
                                 <select name="" id="">
                                     <option value="">All Projects</option>
@@ -55,42 +55,84 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tab-filter-info ">
-                        <div class="row">
-                            <div class="col-6 ">
-                                <h2>2 <span>of 10</span><br> <span>Employees</span></h2>
-                            </div>
-                            <div class="col-6 text-right">
-                                <a class=" btn btn-time-add btn-time" href="assignment-save.html"><i class="ico-plus"></i> Add</a>
+                    <div class="assignment-wrap-add assignment-wrap-add-box">
+                        <div class="tab-filter-info ">
+                            <div class="row">
+                                <div class="col-6 ">
+                                    <h2>2 <span>of 10</span><br> <span>Employees</span></h2>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a class=" btn btn-time-add btn-time" href="assignment-save.html"><i class="ico-plus"></i> Add</a>
+                                </div>
                             </div>
                         </div>
+                        <hr class="divider">
+                        <ul class="card-list">
+                            <li class="card mb-4">
+                                <div class="row">
+                                    <div class="col-9  d-md-flex align-items-md-center">
+                                        <h2>John Honai</h2>
+                                        <h3 class="pl-md-3">ISN 74562bfk</h3>
+                                    </div>                                
+                                    <div class="col-3 text-right">
+                                        <span class="icon-delete"></span>
+                                    </div>                                
+                                </div>
+                            </li>
+                            <li class="card mb-4">
+                                <div class="row">
+                                    <div class="col-9  d-md-flex align-items-md-center">
+                                        <h2>Andrew Struass</h2>
+                                        <h3 class="pl-md-3">ISN 74562bfk</h3>
+                                    </div>                                
+                                    <div class="col-3 text-right">
+                                        <span class="icon-delete"></span>
+                                    </div>                                
+                                </div>
+                            </li>                        
+                        </ul>
                     </div>
-                    <hr class="divider">
-                    <ul class="card-list">
-                        <li class="card mb-4">
+                    <div class="assignment-wrap-save assignment-wrap-save-box">
+                        <div class="tab-filter-info ">
                             <div class="row">
-                                <div class="col-9  d-md-flex align-items-md-center">
-                                    <h2>John Honai</h2>
-                                    <h3 class="pl-md-3">ISN 74562bfk</h3>
-                                </div>                                
-                                <div class="col-3 text-right">
-                                    <span class="icon-delete"></span>
-                                </div>                                
+                                <div class="col-6 ">
+                                    <a href="assignment.html" class="ico-back"></a>
+                                    <h2><strong>2</strong> <span>of 10</span><br> Selected</h2>
+                                </div>
+                                <div class="col-6 text-right d-flex justify-content-end align-self-end align-self-md-center">
+                                    <button class=" btn btn-time btn-time-primary btn-time-assgnmt-save">Save</button>
+                                </div>
                             </div>
-                        </li>
-                        <li class="card mb-4">
-                            <div class="row">
-                                <div class="col-9  d-md-flex align-items-md-center">
-                                    <h2>Andrew Struass</h2>
-                                    <h3 class="pl-md-3">ISN 74562bfk</h3>
-                                </div>                                
-                                <div class="col-3 text-right">
-                                    <span class="icon-delete"></span>
-                                </div>                                
-                            </div>
-                        </li>                        
-                    </ul>
+                        </div>
+                        <hr class="divider">
+                        <ul class="card-list">
+                            <li class="card mb-4">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="chk-custom"><input type="checkbox" name="" id="assignment-1"><label for="assignment-1"></label></div>
+                                    </div>
+                                    <div class="col-md-6 col-9 d-md-flex align-items-md-center">
+                                        <h2>John Honai</h2>
+                                        <h3 class="pl-md-3">ISN 74562bfk</h3>
+                                    </div>
+                                    <div class="col-md-4 col-12 txt-company-assnmt"><span>ABC Welding Company</span></div>
+                                </div>
+                            </li>
+                            <li class="card mb-4">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="chk-custom"><input type="checkbox" name="" id="assignment-2"><label for="assignment-2"></label></div>
+                                    </div>
+                                    <div class="col-md-6 col-9 d-md-flex align-items-md-center">
+                                        <h2>John Honai</h2>
+                                        <h3 class="pl-md-3">ISN 74562bfk</h3>
+                                    </div>
+                                    <div class="col-md-4 col-12 txt-company-assnmt"><span>ABC Welding Company</span></div>
+                                </div>
+                            </li>
+                                         
+                        </ul>
+                    </div>
                 </div>
             </main>
         </div>
@@ -101,8 +143,6 @@
         <script src="js/jquery-ui.js"></script>
         <script src="js/custom.js"></script>
         <!-- <script src="js/bootstrap.min.js"></script> -->
-        
-        
     </body>
 </html>
 
