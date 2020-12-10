@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covanta - Employee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style-ui.css">
+       
+       
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <link rel="stylesheet" href="css/style-ui.css"> -->
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap wrap-box">
+                <aside id="left-main-nav">
+                    <h1><a href=""><img src="./images/logo.png" alt="Covanta"></a></h1>
+                    <span class="menu-btn-close toggle d-lg-none"></span>
+                    <ul>
+                        <li class="active"><a href="./index.html">Work</a></li>
+                        <li><a href="./company.html">Contractor Companies</a></li>
+                    </ul>
+                    <ul>
+                        <li class="txt-grey"><a href="">Configuration</a></li>
+                        <li><a href="./user-admin.html">Users</a></li>
+                        <li><a href="">Locations</a></li>
+                        <li><a href="">Projects</a></li>
+                        <li><a href="./activity-status.html">Activities</a></li>
+                        <li><a href="./assignment.html">Project Assignment</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Reports</a></li>
+                        <li><a href="./help.html">Help</a></li>
+                    </ul>
+                </aside>
+                <div id="main-wrap">
+                    <header id="header">
+                        <div class="container-fluid d-flex justify-content-between">
+                            <div class="mobile-menu d-lg-none">
+                                <div class="toggle">
+                                    <div class="bar"></div>
+                                </div>
+                                <span>Work</span>
+                            </div>
+                            
+
+                              <div class="dropdown show ml-auto">
+                                <a class="profile-setting dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anjue</a>                      
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#chngpwd">Change Password</a>
+                                  <a class="dropdown-item" href="#">Logout</a>
+                                </div>
+                              </div>  
+                        </div> 
+                        <div class="container-fluid">
+                            <div class="tab-header row  position-relative">
+                                <nav class="col-md-8">
+                                    <ul class="nav nav-pills justify-content-between justify-content-md-start" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                          <a class="nav-link active" id="employees-tab" data-toggle="pill" href="#pills-employees" role="tab" aria-controls="pills-employees" aria-selected="true">Employees</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <a class="nav-link" id="contractors-tab" data-toggle="pill" href="#pills-contractors" role="tab" aria-controls="pills-contractors" aria-selected="false">Contactors</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <a class="nav-link" id="activities-tab" data-toggle="pill" href="#pills-activities" role="tab" aria-controls="pills-activities" aria-selected="false">Activities</a>
+                                        </li>
+                                      </ul>
+                                </nav>
+                                <div class="col-md-4 d-none d-md-block">
+                                    <a href="" class="lnk-plus" data-toggle="modal" data-target="#add-emp-1">+</a>
+                                </div>                          
+                            </div>
+                        </div> 
+                    </header>
+                    
+                    <div class="container-fluid main-container">                    
+                        <div class="tab-data">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-employees" role="tabpanel" aria-labelledby="employees-tab">
+                                    <div class="tab-filter row pt-3 mb-3">
+                                        <div class=" col-md-8 mr-md-auto pt-4">
+                                            <div class="date-picker d-flex week-picker-employee justify-content-between justify-content-md-start">
+                                                <button class="prev-day btn" id="previous-day"></button>
+                                                <input class="week-picker hasDatepicker" id="dp1606892809754">
+                                                <button class="next-day btn" id="next-day"> </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 d-flex justify-content-end pt-4">
+                                            <div class="select mr-md-3">
+                                                <select name="" id="">
+                                                    <option value="">All Projects</option>
+                                                    <option value="">Hemstead Outage - Aug 2020</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="" id="">
+                                                    <option value="">All Contactors</option>
+                                                    <option value="">ABC Welding Company</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-filter-info ">
+                                        <div class="row">
+                                            <div class="col-md-3 col-6 order-1 order-md-1">
+                                                <h2>Need <br> Approval</h2>
+                                            </div>
+                                            <div class="col-md-3 col-6 order-3 order-md-2">
+                                                <strong class="txt-bold">24.25 <small class="txt-small">hrs</small></strong><br>
+                                                <span>out of <span class="sep-md"></span> 122.75 hrs</span>
+                                            </div>
+                                            <div class="col-md-4 col-6 order-4 order-md-3">
+                                                <strong class="txt-bold">03</strong>
+                                                <br>
+                                                <span>out of 12 <span class="sep-md"></span> employees</span>
+                                            </div>
+                                            <div class="col-md-2 col-6 order-2 order-md-4">
+                                                <div class="form-group justify-content-end d-flex align-items-center">  
+                                                    <span class="txt-aprov-all">Approve all</span>
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm" data-toggle="modal" data-target="#alertModal">
+                                                    <label for="switch-sm"></label>
+                                                    </span>
+                                                </div>                       
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <ul class="card-list">
+                                        <li class="card mb-4">
+                                            <div class="row">
+                                                    <div class="col-md-4 col-9 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                            <h2>Darnel Jones</h2>
+
+                                                        <h3 class="pl-md-3  pb-3 pb-md-0">ISN-06188596</h3>
+                                                        <span class="d-flex pb-4 pb-md-0 pl-md-3"><span class="d-sm-none d-md-block"></span>06 Nov 2020</span>
+                                                        <input type="hidden" id="DW" value="2020-11-06">
+                                                    </div>
+                                                    <div class="col-md-6 ml-auto order-4 order-md-3 justify-content-md-end box-down">
+                                                        <div class="d-md-inline-flex d-flex justify-content-between justify-content-md-end activity-emp-box">
+                                                                <span class="txt-primary txt-activity pr-md-4">1 Activity</span>
+                                                                <span class="txt-secondary txt-activity"><i class="ico-day mr-2"></i> 16.58 Hrs</span>
+                                                            <a href="" class="details lnk-update pl-md-5" id="146bfc41-3547-447e-b9b6-3f9f56ef9c37|DAY|7253a921-9773-4cb2-9cd9-0cb1e31597c9|2020-11-06" data-toggle="modal" data-target="#update-emp-1">
+                                                                    <span class="d-md-inline-block">Total: 11.50 hrs</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 col-3  order-2 order-md-4 text-right col-btn-toggle pl-0">
+                                                        <div class="form-group pr-md-5">
+                                                                <span class="ico-close-gray mr-2 reject" id="146bfc41-3547-447e-b9b6-3f9f56ef9c37|ISN-06188596|DAY"></span>
+                                                                    <span class="switch switch-lg">
+                                                                        <input type="checkbox" class="switch switchApprove" id="ISN-06188596|146bfc41-3547-447e-b9b6-3f9f56ef9c37|DAY|2020-11-06" name="Approve">
+                                                                        <label for="ISN-06188596|146bfc41-3547-447e-b9b6-3f9f56ef9c37|DAY|2020-11-06"></label>
+                                                                    </span>
+                                                        </div>
+                                                        <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                    </div>
+                                                    <div class="col-md-12 order-5">
+                                                        <ul class="acivity-view  d-flex flex-column">
+                                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                                            <span class="col-10">* Unspecified *</span>
+                                                                            <span class="col-2 text-right text-md-left txt-hrs">11.50 Hrs</span>
+                                                                        </li>
+
+                                                        </ul>
+                                                        <a href="" class="lnk-hours-list mt-4 d-block d-md-none"></a>
+                                                    </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+    
+    
+                                    <!-- Employee Modal starts-->
+    
+                                    <!-- Add Employee Model -->
+                                    <div class="modal fade" id="add-emp-1" tabindex="-1" aria-labelledby="addEmployee" style="display: none;" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                              <div class="modal-content">
+                                                <div class="modal-header mb-5">
+                                                  <h5 class="modal-title">Add timecard</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body p-0">
+                                                    <div class="col-md-12">
+                                                        <div class="select mb-5">
+                                                            <select name="" id="">
+                                                                <option value="">Select Employee</option>
+                                                                <option value="">John Honai (ISN-1224-1112)</option>
+                                                                <option value="">John Honai (ISN-1224-1112)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="d-flex row align-items-center">
+                                                            <div class="col-3 col-3 pr-0">
+                                                                <!-- <span class="txt-secondary txt-activity"><i class="ico-week mr-2"></i> 10 Sep 2020</span> -->
+                                                                <div class="date-picker date-picker-popup d-flex justify-content-between justify-content-md-start">
+                                                                    <!-- <button class="prev-day btn" id="previous-day"></button> -->
+                                                                    <input class="week-picker hasDatepicker" id="dp1606892809755">
+                                                                    <!-- <button class="next-day btn" id="next-day"> </button> -->
+                                                                </div>
+                                                            
+                                                            </div>
+                                                            <div class="col-9 pl-0 pl-md-4 text-right">
+                                                                <div class="day-night-chk">
+                                                                    <div class="toggle-container d-flex">
+                                                                        <input id="toggle-on" class="toggle toggle-left checked" name="toggle" type="radio" checked="">
+                                                                        <label for="toggle-on" class="btn day-radio-btn"><span class="d-flex"><i class="ico-day mr-2"></i>Day</span></label>
+                                                                        <input id="toggle-off" class="toggle toggle-right" name="toggle" type="radio">
+                                                                        <label for="toggle-off" class="btn night-radio-btn"><span class="d-flex"><i class="ico-night mr-2"></i>Night</span></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="row mt-4 activity-update-row">
+                                                            <li class="d-flex mb-3">
+                                                                <div class="col-6">
+                                                                    <div class="select">
+                                                                        <select name="" id="">
+                                                                            <option value="">Select activity</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4 input-increment pl-0">
+                                                                    <input type="number" class="increamenter" value="0" min="0" max="10000" step="1" style="display: none;"><div class="input-group  "><div class="input-group-prepend"><button style="min-width: 2.5rem" class="btn btn-decrement " type="button"><strong>−</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control increamenter" placeholder=""><div class="input-group-append"><button style="min-width: 2.5rem" class="btn btn-increment " type="button"><strong>+</strong></button></div></div>
+                                                                </div>
+                                                                <div class="col-2 input-increment pl-0 align-self-center">
+                                                                    <span class="icon-delete invisible"></span>
+                                                                </div>
+                                                            </li>
+                                                           <li class="d-flex mb-3">
+                                                                <div class="col-6">
+                                                                    <div class="select">
+                                                                        <select name="" id="">
+                                                                            <option value="">Select activity</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4 input-increment pl-0">
+                                                                    <input type="number" class="increamenter" value="0" min="0" max="10000" step="1" style="display: none;"><div class="input-group  "><div class="input-group-prepend"><button style="min-width: 2.5rem" class="btn btn-decrement " type="button"><strong>−</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control increamenter" placeholder=""><div class="input-group-append"><button style="min-width: 2.5rem" class="btn btn-increment " type="button"><strong>+</strong></button></div></div>
+                                                                </div>
+                                                                <div class="col-2 input-increment pl-0 align-self-center">
+                                                                    <span class="icon-delete"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="d-flex mb-3">
+                                                                <div class="col-6">
+                                                                    <div class="select">
+                                                                        <select name="" id="">
+                                                                            <option value="">Select activity</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4 input-increment pl-0">
+                                                                    <input type="number" class="increamenter" value="0" min="0" max="10000" step="1" style="display: none;"><div class="input-group  "><div class="input-group-prepend"><button style="min-width: 2.5rem" class="btn btn-decrement " type="button"><strong>−</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control increamenter" placeholder=""><div class="input-group-append"><button style="min-width: 2.5rem" class="btn btn-increment " type="button"><strong>+</strong></button></div></div>
+                                                                </div>
+                                                                <div class="col-2 input-increment pl-0 align-self-center">
+                                                                    <span class="icon-delete"></span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="activity-operations">
+                                                            <span class="ico-add-activity"></span>
+                                                        </div>
+                                                        <hr class="divider">
+                                                        <div class="row total-hrs-holder">
+                                                            <div class="col-6 col-md-8"><span class="txt-secondary txt-activity"><i class="ico-week mr-2"></i> 70.00 hrs</span></div>
+                                                            <div class="col-6 col-md-4"><span class="txt-secondary txt-activity">Total:</span><span class="pl-3 txt-primary ">10.00 hrs</span></div>
+                                                        </div>
+                                                        <div class="row mt-3 align-items-center">
+                                                            <div class="col-3 txt-aprov-day">Comment</div>
+                                                            <div class="col-9 text-right">
+                                                                <div class="select mb-0">
+                                                                    <select name="" id="">
+                                                                        <option value="">Select activity</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3 align-items-center">
+                                                            <div class="col-12 text-right">
+                                                                <input type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-8 txt-aprov-day">Approve hours for this day</div>
+                                                            <div class="col-4 text-right">
+                                                                <div class="form-group m-0">  
+                                                                    <span class="switch switch-lg">
+                                                                    <input type="checkbox" class="switch" id="switch-aprv-day">
+                                                                    <label for="switch-aprv-day"></label>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-8 txt-aprov-day">Reject hours for this shift</div>
+                                                            <div class="col-4 text-right">
+                                                                <a href="" class="ico-close-gray"></a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer d-flex text-right">
+                                                  <button type="button" class="btn btn-time-primary btn-time">Save</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+    
+                                    <div class="modal fade" id="update-emp-1" tabindex="-1" aria-labelledby="updateEmployee" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                          <div class="modal-content">
+                                            <div class="modal-header mb-5">
+                                              <h5 class="modal-title">Allocate  timecard</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body p-0">
+                                                <div class="col-md-12">
+                                                    <div class="select mb-5 inactive">
+                                                        <select name="" id="">
+                                                            <option value="">John Honai (ISN-1224-1112)</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-flex row">
+                                                        <div class="col-6">
+                                                            <!-- <span class="txt-secondary txt-activity"><i class="ico-week mr-2"></i> 10 Sep 2020</span> -->
+                                                            <div class="date-picker date-picker-popup d-flex justify-content-between justify-content-md-start">
+                                                                <!-- <button class="prev-day btn" id="previous-day"></button> -->
+                                                                <input class="week-picker hasDatepicker" id="dp1606892809756">
+                                                                <!-- <button class="next-day btn" id="next-day"> </button> -->
+                                                            </div>
+                                                        
+                                                        </div>
+                                                        <div class="col-6 text-right"><span class="txt-secondary txt-activity pr-5 mr-5"><i class="ico-night mr-2"></i> 10.00 hrs</span></div>
+                                                    </div>
+                                                    <ul class="row mt-4 activity-update-row">
+                                                        <li class="d-flex mb-3">
+                                                            <div class="col-6">
+                                                                <div class="select">
+                                                                    <select name="" id="">
+                                                                        <option value="">Select activity</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4 input-increment pl-0">
+                                                                <input type="number" class="increamenter" value="0" min="0" max="10000" step="1" style="display: none;"><div class="input-group  "><div class="input-group-prepend"><button style="min-width: 2.5rem" class="btn btn-decrement " type="button"><strong>−</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control increamenter" placeholder=""><div class="input-group-append"><button style="min-width: 2.5rem" class="btn btn-increment " type="button"><strong>+</strong></button></div></div>
+                                                            </div>
+                                                            <div class="col-2 input-increment pl-0 align-self-center">
+                                                                <span class="icon-delete invisible"></span>
+                                                            </div>
+                                                        </li>
+                                                       <li class="d-flex mb-3">
+                                                            <div class="col-6">
+                                                                <div class="select">
+                                                                    <select name="" id="">
+                                                                        <option value="">Select activity</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4 input-increment pl-0">
+                                                                <input type="number" class="increamenter" value="0" min="0" max="10000" step="1" style="display: none;"><div class="input-group  "><div class="input-group-prepend"><button style="min-width: 2.5rem" class="btn btn-decrement " type="button"><strong>−</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control increamenter" placeholder=""><div class="input-group-append"><button style="min-width: 2.5rem" class="btn btn-increment " type="button"><strong>+</strong></button></div></div>
+                                                            </div>
+                                                            <div class="col-2 input-increment pl-0 align-self-center">
+                                                                <span class="icon-delete"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex mb-3">
+                                                            <div class="col-6">
+                                                                <div class="select">
+                                                                    <select name="" id="">
+                                                                        <option value="">Select activity</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4 input-increment pl-0">
+                                                                <input type="number" class="increamenter" value="0" min="0" max="10000" step="1" style="display: none;"><div class="input-group  "><div class="input-group-prepend"><button style="min-width: 2.5rem" class="btn btn-decrement " type="button"><strong>−</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control increamenter" placeholder=""><div class="input-group-append"><button style="min-width: 2.5rem" class="btn btn-increment " type="button"><strong>+</strong></button></div></div>
+                                                            </div>
+                                                            <div class="col-2 input-increment pl-0 align-self-center">
+                                                                <span class="icon-delete"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="activity-operations">
+                                                        <span class="ico-add-activity"></span>
+                                                    </div>
+                                                    <hr class="divider">
+                                                    <div class="row total-hrs-holder">
+                                                        <div class="col-6 col-md-8"><span class="txt-secondary txt-activity"><i class="ico-week mr-2"></i> 70.00 hrs</span></div>
+                                                        <div class="col-6 col-md-4"><span class="txt-secondary txt-activity">Total:</span><span class="pl-3 txt-primary ">10.00 hrs</span></div>
+                                                    </div>
+                                                    <div class="row mt-3 align-items-center">
+                                                        <div class="col-3 txt-aprov-day">Comment</div>
+                                                        <div class="col-9 text-right">
+                                                            <div class="select mb-0">
+                                                                <select name="" id="">
+                                                                    <option value="">Select activity</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-8 txt-aprov-day">Approve hours for this day</div>
+                                                        <div class="col-4 text-right">
+                                                            <div class="form-group m-0">  
+                                                                <span class="switch switch-lg">
+                                                                <input type="checkbox" class="switch" id="switch-aprv-day">
+                                                                <label for="switch-aprv-day"></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-8 txt-aprov-day">Reject hours for this shift</div>
+                                                        <div class="col-4 text-right">
+                                                            <a href="" class="ico-close-gray"></a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-between modal-footer-multi">
+                                              <button type="button" class="btn btn-time-secondary btn-time">Save</button>
+                                              <button type="button" class="btn btn-time-primary btn-time">Save &amp; Next</button>
+                                              <button type="button" class="btn btn-time-primary btn-time">Save &amp; New</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- Employee Modal ends-->
+    
+    
+                                      <!-- alert starts-->
+                                      <div class="modal fade alert-popup" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Unallocated Timecards</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body p-0 mb-4">
+                                                <div class="col-md-12">
+                                                    <p>There is still unallocated time, which cannot be approved. Only allocated timecards will be approved.
+                                                        evng paryam, cashum idam
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-between">
+                                              <button type="button" class="btn btn-time-secondary btn-time" data-dismiss="modal">Cancel</button>
+                                              <button type="button" class="btn btn-time-primary btn-time">Approve allocated</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- alert ends-->
+    
+    
+    
+    
+                                </div>
+                                <div class="tab-pane fade" id="pills-contractors" role="tabpanel" aria-labelledby="contractors-tab">
+                                    <div class="tab-filter row pt-3 mb-3">
+                                        <div class=" col-md-8 mr-md-auto pt-4">
+                                            <div class="date-picker  week-picker-contactor d-flex justify-content-between justify-content-md-start">
+                                                <button class="prev-day btn" id="previous-day"></button>
+                                                <input type="hidden" name="contractor-calender" value="" id="contractor-calender">
+                                                <label class="week-picker-contract" for="contractor-calender">All Unreviewed</label>
+                                                <button class="next-day btn" id="next-day"> </button>
+                                                <div class="calender-popup chk-box-all">
+                                                    <div class="chk-custom">
+                                                        <input type="checkbox" checked="" name="" id="show-all">
+                                                        <label for="show-all">Show all unreviewed</label>
+                                                    </div>
+                                                    <span id="datepicker-contract" class="hasDatepicker"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Dec</span>&nbsp;<span class="ui-datepicker-year">2020</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">SUN</span></th><th scope="col"><span title="Monday">MON</span></th><th scope="col"><span title="Tuesday">TUE</span></th><th scope="col"><span title="Wednesday">WED</span></th><th scope="col"><span title="Thursday">THU</span></th><th scope="col"><span title="Friday">FRI</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">SAT</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default ui-priority-secondary" href="#">29</a></td><td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default ui-priority-secondary" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">1</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">4</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">5</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">7</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">11</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">12</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">14</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">18</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">19</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">21</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">25</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">26</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">28</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="11" data-year="2020"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-priority-secondary" href="#">1</a></td><td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="0" data-year="2021"><a class="ui-state-default ui-priority-secondary" href="#">2</a></td></tr></tbody></table></div></span>
+                                                    <input id="datepicker-contract-ip" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 d-flex justify-content-end pt-4">
+                                            <div class="select mr-md-3">
+                                                <select name="" id="">
+                                                    <option value="">All Projects</option>
+                                                    <option value="">Hemstead Outage - Aug 2020</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="" id="">
+                                                    <option value="">All Contactors</option>
+                                                    <option value="">ABC Welding Company</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-filter-info ">
+                                        <div class="row">
+                                            <div class="col-md-4 col-12 order-1 order-md-1">
+                                                <h2>Needs <br> Review</h2>
+                                            </div>
+                                            <div class="col-md-4 col-6 order-3 order-md-2">
+                                                <strong class="txt-bold">24.25 <small class="txt-small">hrs</small></strong><br>
+                                                <span>out of <span class="sep-md"></span> 122.75 hrs</span>
+                                            </div>
+                                            <div class="col-md-4 col-6 order-4 order-md-3">
+                                                <strong class="txt-bold">1</strong>
+                                                <br>
+                                                <span>out of 1 <span class="sep-md"></span> contractors</span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <ul class="card-list">
+                                        <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-9 order-1 order-md-1 d-md-flex align-items-md-center">
+                                                    <a href="" class="d-flex align-items-center lnk-contactor-title">
+                                                        <h2 class="mb-md-0">ABC Welding Company</h2>
+                                                        <span class="spn-contract-date pl-md-3">10 Sep 2020</span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-7 col-12 order-3 order-md-3 mt-3 mt-md-0 ">
+                                                    <div class=" d-flex flex-md-row flex-column justify-content-md-end align-items-md-center">
+                                                        <span class="txt-primary-sec txt-activity mr-3">2 Activities</span>
+                                                        <span class="txt-primary-sec txt-activity"><i class="ico-clock-warning"></i>6.00 hrs</span>
+                                                        
+                                                        <span class="txt-primary txt-act-hrs pl-md-5 pl-md-2">98.50/122.75 hrs approved</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-3  order-2 order-md-4  text-right">
+                                                    <div class="form-group pr-md-5 mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-12">
+                                                        <label for="switch-sm-12"></label>
+                                                        </span>
+                                                    </div>
+                                                    <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                </div>
+                                                <div class="col-md-12 order-4 order-md-4">
+                                                    <ul class="acivity-view  d-flex flex-column">
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-8 col-md-6 order-1 order-md-1">A12311 Jet lance slurry lines</span>
+                                                            <span class="col-12 col-md-3 order-3 order-md-2 text-left txt-hrs-contract text-md-right">38.50/62.75 Hrs approved</span>
+                                                            <div class="col-4 col-md-3 order-2 order-md-3 text-right">
+                                                                <span class="switch switch-lg pr-md-5">
+                                                                    <input type="checkbox" class="switch" id="switch-sm-cont-1">
+                                                                    <label for="switch-sm-cont-1"></label>
+                                                                </span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-8 col-md-6 order-1 order-md-1">A12311 Vaccum out primary air duct</span>
+                                                            <span class="col-12 col-md-3 order-3 order-md-2 text-left txt-hrs-contract text-md-right">60/60 Hrs approved</span>
+                                                            <div class="col-4 col-md-3 order-2 order-md-3 text-right">
+                                                                <span class="switch switch-lg pr-md-5">
+                                                                    <input type="checkbox" class="switch" id="switch-sm-cont-2">
+                                                                    <label for="switch-sm-cont-2"></label>
+                                                                </span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="" class="lnk-hours-list mt-4 d-md-block d-lg-none"></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-9 order-1 order-md-1 d-md-flex align-items-md-center">
+                                                    <h2 class="mb-md-0">ABC Welding Company</h2>
+                                                    <span class="spn-contract-date pl-md-3">10 Sep 2020</span>
+                                                </div>
+                                                <div class="col-md-7 col-12 order-3 order-md-3 mt-3 mt-md-0 ">
+                                                    <div class=" d-flex flex-md-row flex-column justify-content-md-end align-items-md-center">
+                                                        <span class="txt-primary-sec txt-activity mr-3">2 Activities</span>
+                                                        <span class="txt-primary-sec txt-activity"><i class="ico-pen"></i>6.00 hrs</span>
+                                                        
+                                                        <span class="txt-primary txt-act-hrs pl-md-5 pl-md-2">98.50/122.75 hrs approved</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1 col-3  order-2 order-md-4  text-right">
+                                                    <div class="form-group pr-md-5 mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-12">
+                                                        <label for="switch-sm-12"></label>
+                                                        </span>
+                                                    </div>
+                                                    <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                </div>
+                                                <div class="col-md-12 order-4 order-md-4">
+                                                    <ul class="acivity-view  d-flex flex-column">
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-8 col-md-6 order-1 order-md-1">A12311 Jet lance slurry lines</span>
+                                                            <span class="col-12 col-md-3 order-3 order-md-2 text-left txt-hrs-contract text-md-right">38.50/62.75 Hrs approved</span>
+                                                            <div class="col-4 col-md-3 order-2 order-md-3 text-right">
+                                                                <span class="switch switch-lg pr-md-5">
+                                                                    <input type="checkbox" class="switch" id="switch-sm-cont-1">
+                                                                    <label for="switch-sm-cont-1"></label>
+                                                                </span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-8 col-md-6 order-1 order-md-1">A12311 Vaccum out primary air duct</span>
+                                                            <span class="col-12 col-md-3 order-3 order-md-2 text-left txt-hrs-contract text-md-right">60/60 Hrs approved</span>
+                                                            <div class="col-4 col-md-3 order-2 order-md-3 text-right">
+                                                                <span class="switch switch-lg pr-md-5">
+                                                                    <input type="checkbox" class="switch" id="switch-sm-cont-2">
+                                                                    <label for="switch-sm-cont-2"></label>
+                                                                </span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="" class="lnk-hours-list mt-4 d-md-block d-lg-none"></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="pills-activities" role="tabpanel" aria-labelledby="activities-tab">
+                                    <div class="tab-filter row pt-3 mb-3 justify-content-between">
+                                        <div class="col-md-8 d-flex align-items-center flex-column flex-md-row mt-4 mt-md-0">
+                                            <div class="date-picker d-flex week-picker-employee justify-content-between justify-content-md-start">
+                                                <button class="prev-day btn" id="previous-day"></button>
+                                                <input class="week-picker hasDatepicker" id="dp1606892809757">
+                                                <button class="next-day btn" id="next-day"> </button>
+                                            </div>
+                                            <div class="day-night-chk ml-md-4 mt-4 mt-md-0 mr-0 ml-0">
+                                                <div class="toggle-container d-flex">
+                                                    <input id="toggle-on1" class="toggle toggle-left checked" name="toggle" type="radio" checked="">
+                                                    <label for="toggle-on1" class="btn day-radio-btn"><span class="d-flex"><i class="ico-day mr-2"></i>Day</span></label>
+                                                    <input id="toggle-off1" class="toggle toggle-right" name="toggle" type="radio">
+                                                    <label for="toggle-off1" class="btn night-radio-btn"><span class="d-flex"><i class="ico-night mr-2"></i>Night</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 flex-column flex-md-row d-flex pt-4">
+                                            <div class="select mr-md-3">
+                                                <select name="" id="">
+                                                    <option value="">All Projects</option>
+                                                    <option value="">Hemstead Outage - Aug 2020</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <select name="" id="">
+                                                    <option value="">All Contactors</option>
+                                                    <option value="">ABC Welding Company</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-filter-info ">
+                                        <div class="row">
+                                            <div class="col-md-4 col-12 order-1 order-md-1">
+                                                <h2>3 <br> Activity</h2>
+                                            </div>
+                                            <div class="col-md-4 col-6 order-3 order-md-2">
+                                                <strong class="txt-bold">18.50 <small class="txt-small">hrs</small></strong><br>
+                                                <span>Hours clocked</span>
+                                            </div>
+                                            <div class="col-md-4 col-6 order-4 order-md-3">
+                                                <strong class="txt-bold">209.5 <small class="txt-small">hrs</small></strong>
+                                                <br>
+                                                <span>Daiy total entered</span>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <hr class="divider">
+                                    <ul class="card-list activity-card-list">   
+                                        <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-9 order-1 mb-3 mb-md-0">
+                                                    <h2>Inspect / UT 2nd Pass - (Tech Std 303-4)</h2>
+                                                </div>  
+                                                <div class="col-md-2 col-6 order-3 order-md-2">
+                                                    <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Hours Worked:</span>15.50 hrs</span> 
+                                                </div>  
+                                                <div class="col-md-2  col-6 order-4 order-md-3">
+                                                    <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Remaining:</span>35.00 hrs</span> 
+                                                </div>  
+                                                <div class="col-md-3 order-5 order-md-4 mt-3 mt-md-0">
+                                                    <span class="txt-primary-sec txt-activity"><span>Est Complete:</span>2020-10-22</span> 
+                                                    <i class="ico-green-tick"></i>
+                                                </div>  
+                                                <div class="col-md-1 col-3 text-right order-md-5 order-2 pl-0">
+                                                    <div class="form-group mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-1">
+                                                        <label for="switch-sm-1"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>                               
+                                            </div>
+                                        </li>   
+                                        <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-9 order-1 mb-3 mb-md-0">
+                                                    <h2>Inspect / UT 2nd Pass - (Tech Std 303-4)</h2>
+                                                </div>  
+                                                <div class="col-md-2 col-6 order-3 order-md-2">
+                                                    <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Hours Worked:</span>15.50 hrs</span> 
+                                                </div>  
+                                                <div class="col-md-2  col-6 order-4 order-md-3">
+                                                    <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Remaining:</span>35.00 hrs</span> 
+                                                </div>  
+                                                <div class="col-md-3 order-5 order-md-4 mt-3 mt-md-0">
+                                                    <span class="txt-primary-sec txt-activity"><span>Est Complete:</span>2020-10-22</span> 
+                                                </div>  
+                                                <div class="col-md-1 col-3 text-right order-md-5 order-2 pl-0">
+                                                    <div class="form-group mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-2">
+                                                        <label for="switch-sm-2"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>                               
+                                            </div>
+                                        </li>   
+                                        <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-9 order-1 mb-3 mb-md-0">
+                                                    <h2>Inspect / UT 2nd Pass - (Tech Std 303-4)</h2>
+                                                </div>  
+                                                <div class="col-md-2 col-6 order-3 order-md-2">
+                                                    <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Hours Worked:</span>15.50 hrs</span> 
+                                                </div>  
+                                                <div class="col-md-2  col-6 order-4 order-md-3">
+                                                    <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Remaining:</span>35.00 hrs</span> 
+                                                </div>  
+                                                <div class="col-md-3 order-5 order-md-4 mt-3 mt-md-0">
+                                                    <span class="txt-primary-sec txt-activity"><span>Est Complete:</span>2020-10-22</span> 
+                                                    <i class="ico-green-tick"></i>
+                                                </div>  
+                                                <div class="col-md-1 col-3 text-right order-md-5 order-2 pl-0">
+                                                    <div class="form-group mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-3">
+                                                        <label for="switch-sm-3"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>                               
+                                            </div>
+                                        </li>   
+                                    </ul>
+    
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update-activity">
+                                        update activity status
+                                      </button>
+                                      <div class="modal fade" id="update-activity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header mb-5">
+                                              <h4 class="modal-title" id="myModalLabel">Update activity status</h4>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            </div>
+                                            <div class="modal-body p-0">
+                                                <div class="pl-4 mb-5">
+                                                    <h3 class="modal-title">Inspect / UT 2nd Pass - (Tech Std 303-4)</h3>
+                                                </div>
+                                                
+                                              <form>
+                                                  <div class="form-group d-flex">
+                                                    <label for="" class="col-sm-4 col-5 col-form-label">2020-10-22</label>
+                                                      <div class="col-md-8 col-7">
+                                                        <div class="day-night-chk ml-0">
+                                                            <div class="toggle-container d-flex">
+                                                                <input id="toggle-on2" class="toggle toggle-left checked" name="toggle" type="radio" checked="">
+                                                                <label for="toggle-on2" class="btn day-radio-btn"><span class="d-flex"><i class="ico-day mr-2"></i>Day</span></label>
+                                                                <input id="toggle-off2" class="toggle toggle-right" name="toggle" type="radio">
+                                                                <label for="toggle-off2" class="btn night-radio-btn"><span class="d-flex"><i class="ico-night mr-2"></i>Night</span></label>
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group d-flex">
+                                                    <label for="" class="col-sm-4 col-5 col-form-label">Hours worked</label>
+                                                    <div class="col-sm-8 col-7">
+                                                      <input type="text" class="form-control">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group d-flex">
+                                                    <label for="" class="col-sm-4 col-5 col-form-label">Hours remaining</label>
+                                                    <div class="col-sm-8 col-7">
+                                                      <input type="text" class="form-control" id="" placeholder="">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group d-flex">
+                                                    <label for="" class="col-sm-4 col-5 col-form-label">Estimated completion date</label>
+                                                    <div class="col-sm-8 col-7 align-self-center">
+                                                        <div class="date-picker date-picker-popup  justify-content-between justify-content-md-start">
+                                                            <input class="week-picker hasDatepicker" id="dp1606892809758">
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-group d-flex justify-content-end">
+                                                    <div class="col-sm-8"><label for="" class=" col-form-label text-center">OR</label></div>
+                                                  </div>
+                                                  <div class="form-group d-flex">
+                                                    <label for="" class="col-sm-4 col-5 col-form-label">Activity complete</label>
+                                                    <div class="col-sm-8 col-7">
+                                                        <div class="form-group mb-0">  
+                                                            <span class="switch switch-lg">
+                                                            <input type="checkbox" class="switch" id="switch-sm-a1">
+                                                            <label for="switch-sm-a1"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="d-flex">
+                                                    <div class="col-sm-12">
+                                                        <hr class="divider">
+                                                    </div>
+                                                  </div>
+                                                  
+                                                  <div class="form-group d-flex">
+                                                    <label for="" class="col-sm-4 col-5 col-form-label">Submit activity</label>
+                                                    <div class="col-sm-8 col-7">
+                                                        <div class="form-group mb-0">  
+                                                            <span class="switch switch-lg">
+                                                            <input type="checkbox" class="switch" id="switch-sm-a2">
+                                                            <label for="switch-sm-a2"></label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                              </form>
+                                            </div>
+                                            <div class="modal-footer d-flex mt-5 justify-content-between modal-footer-multi">
+                                                <button type="button" class="btn btn-time-primary btn-time">Save</button>
+                                                <button type="button" class="btn btn-time-primary btn-time">Save &amp; Next</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap-input-spinner.js"></script>        
+        <script src="js/bootstrap-input-spinner.js"></script>   
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/custom.js"></script>
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        
+        
+    </body>
+</html>
+

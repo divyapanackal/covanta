@@ -10,6 +10,8 @@ $(document).ready(function () {
   $(".lnk-hours-list").click(function (e) {
     e.preventDefault();
     $(this).closest(".row").toggleClass("open");
+    var body = $("html, body");
+    body.stop().animate({scrollTop:$(this).closest(".row").offset().top - 110}, 500, 'swing', function() {});
   });
   $("input[type='number']").inputSpinner({
     buttonsClass: "",
@@ -95,6 +97,7 @@ $(document).ready(function () {
     showOtherMonths: true,
     selectOtherMonths: true,
     dateFormat: "d M yy",
+    altField: "#datepicker-contract-ip",
     monthNames: [
       "Jan",
       "Feb",
@@ -116,9 +119,43 @@ $(document).ready(function () {
         $(this).datepicker("getDate")
       );
       $(".week-picker-contactor .week-picker-contract").html(dateText);
+      // $(".week-picker-contactor #datepicker-contract-ip").html(dateText);
       $(".week-picker-contactor #contractor-calender").val(dateText);
     },
   });
+
+  // $( "#datepicker-contract" ).datepicker( "show" );
+//   $('#datepicker-contract-ip').change(function(){
+//     $('#datepicker-contract').datepicker('setDate', $(this).val());
+// });
+
+  // $(document).on("click",".week-picker-contactor #previous-day",function() {
+  //   var currDate = new Date($("#datepicker-contract").datepicker("getDate"));
+  //   currDate.setDate(currDate.getDate() - 1);
+  //   $("#datepicker-contract").datepicker("setDate", currDate);
+  //   var dateVal = $("#datepicker-contract").val();
+  //   $(".week-picker-contactor .week-picker-contract").html(dateVal);
+  // });
+
+  $(".week-picker-contactor #previous-day").click(function () {
+    // console.log("her")
+    var currDate = new Date($("#datepicker-contract").datepicker("getDate"));
+    currDate.setDate(currDate.getDate() - 1);
+    $("#datepicker-contract").datepicker("setDate", currDate);
+    var dateVal = $("#datepicker-contract").val();
+    $(".week-picker-contactor .week-picker-contract").html(dateVal);
+  });
+
+$(".week-picker-contactor #next-day").click(function () {
+  var currDate = new Date($("#datepicker-contract").datepicker("getDate"));
+  currDate.setDate(currDate.getDate() + 1);
+  $("#datepicker-contract").datepicker("setDate", currDate);
+  var dateVal = $("#datepicker-contract").val();
+    $(".week-picker-contactor .week-picker-contract").html(dateVal);
+});
+
+
+
 
   $(".week-picker-contract").click(function () {
     $(".calender-popup").addClass("active");
@@ -137,14 +174,22 @@ $(document).ready(function () {
     e.stopPropagation();
   });
 
+  if($(".calender-popup #show-all").is(":checked")) {
+    $(".week-picker-contactor #datepicker-contract-ip").val('000-2-2');
+  }
+
+
   $(".calender-popup #show-all").click(function () {
     if ($(this).is(":checked")) {
       $(".calender-popup").addClass("chk-box-all"); // checked
       $(".week-picker-contactor .week-picker-contract").text('All Unreviewed');
+      $(".week-picker-contactor #datepicker-contract-ip").val('000-2-2');
     } else {
       $(".calender-popup").removeClass("chk-box-all"); // unchecked
     }
   });
+
+  console.log($(".week-picker-contactor #datepicker-contract-ip").val())
 
   $(
     ".week-picker-activities .week-picker, .week-picker-employee  .week-picker,.modal .week-picker"
@@ -205,26 +250,63 @@ $(document).ready(function () {
 
 
   /**
-   * Data Tables
+   * help page: menu
    */
 
-  var table = $('#example').DataTable({
-    "searching": false,
-    "info": false,
-    "lengthChange": false,
-    "paging": false,
-    scrollY: 500,
-    'columnDefs': [ {
-      'targets': [2,3,4,5,6], /* column index */
-      'orderable': false, /* true or false */
-   }]
+  $('.menu-btn').click(function (evt) {
+    evt.stopPropagation();
+    $('.left-sticky').toggleClass('show-menu');
   });
 
-  $('#example tbody').on('click', '.lnk-user-edit', function() {
-    $('#user-edit').modal('show'); 
-  });
-  $('#example tbody').on('click', '.lnk-pass-change', function() {
-    $('#pass-change').modal('show'); 
+
+  $('body,html').click(function (e) {
+    var container = $(".left-sticky");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass('show-menu');
+    }
   });
 
+
+
+  $('#list-tab a').on('click', function (e) {
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $(this).tab('show');
+    setTimeout(function(){ 
+      $('.left-sticky').removeClass('show-menu');
+    }, 500);
+    $("html, body").animate({ 
+      scrollTop: $(target).offset().top 
+    }, "slow");
+  });
+  
+
+  $('#list-tab > li > a[href="#contractor"]').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show');
+    $('#list-tab a[href="#add-worker"]').tab('show');
+  })
+
+  $('#list-tab > li > a[href="#supervisor"]').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show');
+    $('#list-tab a[href="#review-submitted"]').tab('show');
+  })
+
+$('.toggle').on('click', function (e) {
+  e.stopPropagation();
+  $('body').toggleClass('open-menu');
+});
+$("#left-main-nav").on("click", function (event) {
+  event.stopPropagation();
+});
+
+
+  
+
+});
+
+
+$(document).on("click", function () {
+  $('body').removeClass('open-menu');
 });

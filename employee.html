@@ -31,12 +31,14 @@
                             </ul>
                         </div>
                         
-                        <span class="d-flex help-btn ml-3"><i class="ico-help"></i></span>
+                        <span class="help-btn ml-3"><a href="help.html" target="_blank" class="d-flex "><i class="ico-help"></i></a></span>
+                        <span class="d-flex  ml-3"><i class="ico-report"></i></span>
                       </nav>
                       <div class="dropdown show">
                         <a href="" class="lnk-plus mr-4  d-md-none" data-toggle="modal" data-target="#add-emp-1">+</a>
-                        <a class="profile-setting dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>                      
+                        <a class="profile-setting dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Anjue</a>                      
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#chngpwd">Change Password</a>
                           <a class="dropdown-item" href="#">Logout</a>
                         </div>
                       </div>  
@@ -61,6 +63,8 @@
                         </div>                          
                     </div>
                 </div>  
+
+               
 
             </header>
             <main>
@@ -121,16 +125,17 @@
                                     <li class="card mb-4">
                                         <div class="row">
                                             <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
-                                                <h2 class="mb-md-0">John Honai<span class="ico-training-status"></span></h2>
+                                                <h2 class="mb-md-0">        <i class="ico-quest-grey"></i>John Honai<span class="ico-training-status"></span></h2>
                                                 <h3 class="pl-md-3 pb-3 pb-md-0">ISN 74562bfk</h3>
                                                 <span class="d-flex pr-md-5 pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span> 70.00 hrs</span>
                                             </div>
-                                            <div class="col-md-7 col-12 order-4  d-md-inline-flex d-flex justify-content-between justify-content-md-end clock-time">
+                                            <div class="col-md-6 col-12 order-4 ml-auto d-md-inline-flex d-flex justify-content-between justify-content-md-end clock-time">
                                                 <span class="d-flex pr-md-3"><i class="ico-night mr-2"></i><span class="d-sm-none d-md-block">Clocked:</span> 10.00 hrs</span>
                                                 <a href="" class="lnk-update align-self-end align-self-md-center" data-toggle="modal" data-target="#update-emp-1">Allocate</a>
                                             </div>
-                                            <div class="col-md-1 col-6  order-2 order-md-4 text-right">
+                                            <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
                                                 <div class="form-group mb-0">  
+                                                    <a href="" class="ico-close-gray mr-2"></a>
                                                     <span class="switch switch-lg">
                                                     <input type="checkbox" class="switch" id="switch-sm-1">
                                                     <label for="switch-sm-1"></label>
@@ -147,15 +152,16 @@
                                                     <h3 class="pl-md-3  pb-3 pb-md-0">ISN 74562bfk</h3>
                                                     <span class="d-flex pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span>70.00 hrs</span>
                                                 </div>
-                                                <div class="col-md-7 order-4 order-md-3 justify-content-md-end box-down">
+                                                <div class="col-md-6 order-4 ml-auto order-md-3 justify-content-md-end box-down">
                                                     <div class="d-md-inline-flex d-flex justify-content-between justify-content-md-end activity-emp-box">
                                                         <span class="txt-primary txt-activity pr-md-4">2 Activities</span>
                                                         <span class="txt-secondary txt-activity"><i class="ico-day mr-2"></i> 10.00 hrs</span>
                                                         <a href="" class="lnk-update pl-md-5  "><span class="d-sm-none d-md-inline-block">Total:</span> 11.00 hrs</a>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-1 col-6  order-2 order-md-4 text-right ">
+                                                <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
                                                     <div class="form-group pr-md-5">  
+                                                        <a href="" class="ico-close-gray mr-2"></a>
                                                         <span class="switch switch-lg">
                                                         <input type="checkbox" class="switch" id="switch-sm-2">
                                                         <label for="switch-sm-2"></label>
@@ -177,7 +183,255 @@
                                                     <a href="" class="lnk-hours-list mt-4 d-block d-md-none"></a>
                                                 </div>
                                             </div>
-                                        </li>
+                                    </li>
+                                    <li class="card mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                <h2 class="mb-md-0">        <i class="ico-quest-grey"></i>John Honai<span class="ico-training-status"></span></h2>
+                                                <h3 class="pl-md-3 pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                <span class="d-flex pr-md-5 pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span> 70.00 hrs</span>
+                                            </div>
+                                            <div class="col-md-6 col-12 order-4 ml-auto d-md-inline-flex d-flex justify-content-between justify-content-md-end clock-time">
+                                                <span class="d-flex pr-md-3"><i class="ico-night mr-2"></i><span class="d-sm-none d-md-block">Clocked:</span> 10.00 hrs</span>
+                                                <a href="" class="lnk-update align-self-end align-self-md-center" data-toggle="modal" data-target="#update-emp-1">Allocate</a>
+                                            </div>
+                                            <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <a href="" class="ico-close-gray mr-2"></a>
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-1">
+                                                    <label for="switch-sm-1"></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                    <h2 class="mb-md-0">John Honai<span class="ico-suspension-status"></span></h2>
+                                                    <h3 class="pl-md-3  pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                    <span class="d-flex pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span>70.00 hrs</span>
+                                                </div>
+                                                <div class="col-md-6 order-4 ml-auto order-md-3 justify-content-md-end box-down">
+                                                    <div class="d-md-inline-flex d-flex justify-content-between justify-content-md-end activity-emp-box">
+                                                        <span class="txt-primary txt-activity pr-md-4">2 Activities</span>
+                                                        <span class="txt-secondary txt-activity"><i class="ico-day mr-2"></i> 10.00 hrs</span>
+                                                        <a href="" class="lnk-update pl-md-5  "><span class="d-sm-none d-md-inline-block">Total:</span> 11.00 hrs</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                    <div class="form-group pr-md-5">  
+                                                        <a href="" class="ico-close-gray mr-2"></a>
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-2">
+                                                        <label for="switch-sm-2"></label>
+                                                        </span>
+                                                    </div>
+                                                    <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                </div>
+                                                <div class="col-md-12 order-5">
+                                                    <ul class="acivity-view  d-flex flex-column">
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Jet lance slurry lines</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Vaccum out primary air duct</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="" class="lnk-hours-list mt-4 d-block d-md-none"></a>
+                                                </div>
+                                            </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                <h2 class="mb-md-0">        <i class="ico-quest-grey"></i>John Honai<span class="ico-training-status"></span></h2>
+                                                <h3 class="pl-md-3 pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                <span class="d-flex pr-md-5 pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span> 70.00 hrs</span>
+                                            </div>
+                                            <div class="col-md-6 col-12 order-4 ml-auto d-md-inline-flex d-flex justify-content-between justify-content-md-end clock-time">
+                                                <span class="d-flex pr-md-3"><i class="ico-night mr-2"></i><span class="d-sm-none d-md-block">Clocked:</span> 10.00 hrs</span>
+                                                <a href="" class="lnk-update align-self-end align-self-md-center" data-toggle="modal" data-target="#update-emp-1">Allocate</a>
+                                            </div>
+                                            <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <a href="" class="ico-close-gray mr-2"></a>
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-1">
+                                                    <label for="switch-sm-1"></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                    <h2 class="mb-md-0">John Honai<span class="ico-suspension-status"></span></h2>
+                                                    <h3 class="pl-md-3  pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                    <span class="d-flex pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span>70.00 hrs</span>
+                                                </div>
+                                                <div class="col-md-6 order-4 ml-auto order-md-3 justify-content-md-end box-down">
+                                                    <div class="d-md-inline-flex d-flex justify-content-between justify-content-md-end activity-emp-box">
+                                                        <span class="txt-primary txt-activity pr-md-4">2 Activities</span>
+                                                        <span class="txt-secondary txt-activity"><i class="ico-day mr-2"></i> 10.00 hrs</span>
+                                                        <a href="" class="lnk-update pl-md-5  "><span class="d-sm-none d-md-inline-block">Total:</span> 11.00 hrs</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                    <div class="form-group pr-md-5">  
+                                                        <a href="" class="ico-close-gray mr-2"></a>
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-2">
+                                                        <label for="switch-sm-2"></label>
+                                                        </span>
+                                                    </div>
+                                                    <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                </div>
+                                                <div class="col-md-12 order-5">
+                                                    <ul class="acivity-view  d-flex flex-column">
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Jet lance slurry lines</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Vaccum out primary air duct</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="" class="lnk-hours-list mt-4 d-block d-md-none"></a>
+                                                </div>
+                                            </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                <h2 class="mb-md-0">        <i class="ico-quest-grey"></i>John Honai<span class="ico-training-status"></span></h2>
+                                                <h3 class="pl-md-3 pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                <span class="d-flex pr-md-5 pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span> 70.00 hrs</span>
+                                            </div>
+                                            <div class="col-md-6 col-12 order-4 ml-auto d-md-inline-flex d-flex justify-content-between justify-content-md-end clock-time">
+                                                <span class="d-flex pr-md-3"><i class="ico-night mr-2"></i><span class="d-sm-none d-md-block">Clocked:</span> 10.00 hrs</span>
+                                                <a href="" class="lnk-update align-self-end align-self-md-center" data-toggle="modal" data-target="#update-emp-1">Allocate</a>
+                                            </div>
+                                            <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <a href="" class="ico-close-gray mr-2"></a>
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-1">
+                                                    <label for="switch-sm-1"></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                    <h2 class="mb-md-0">John Honai<span class="ico-suspension-status"></span></h2>
+                                                    <h3 class="pl-md-3  pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                    <span class="d-flex pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span>70.00 hrs</span>
+                                                </div>
+                                                <div class="col-md-6 order-4 ml-auto order-md-3 justify-content-md-end box-down">
+                                                    <div class="d-md-inline-flex d-flex justify-content-between justify-content-md-end activity-emp-box">
+                                                        <span class="txt-primary txt-activity pr-md-4">2 Activities</span>
+                                                        <span class="txt-secondary txt-activity"><i class="ico-day mr-2"></i> 10.00 hrs</span>
+                                                        <a href="" class="lnk-update pl-md-5  "><span class="d-sm-none d-md-inline-block">Total:</span> 11.00 hrs</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                    <div class="form-group pr-md-5">  
+                                                        <a href="" class="ico-close-gray mr-2"></a>
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-2">
+                                                        <label for="switch-sm-2"></label>
+                                                        </span>
+                                                    </div>
+                                                    <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                </div>
+                                                <div class="col-md-12 order-5">
+                                                    <ul class="acivity-view  d-flex flex-column">
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Jet lance slurry lines</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Vaccum out primary air duct</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="" class="lnk-hours-list mt-4 d-block d-md-none"></a>
+                                                </div>
+                                            </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                <h2 class="mb-md-0">        <i class="ico-quest-grey"></i>John Honai<span class="ico-training-status"></span></h2>
+                                                <h3 class="pl-md-3 pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                <span class="d-flex pr-md-5 pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span> 70.00 hrs</span>
+                                            </div>
+                                            <div class="col-md-6 col-12 order-4 ml-auto d-md-inline-flex d-flex justify-content-between justify-content-md-end clock-time">
+                                                <span class="d-flex pr-md-3"><i class="ico-night mr-2"></i><span class="d-sm-none d-md-block">Clocked:</span> 10.00 hrs</span>
+                                                <a href="" class="lnk-update align-self-end align-self-md-center" data-toggle="modal" data-target="#update-emp-1">Allocate</a>
+                                            </div>
+                                            <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <a href="" class="ico-close-gray mr-2"></a>
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-1">
+                                                    <label for="switch-sm-1"></label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="card mb-4">
+                                            <div class="row">
+                                                <div class="col-md-4 col-6 order-1 order-md-1 d-md-flex align-items-md-center clock-time">
+                                                    <h2 class="mb-md-0">John Honai<span class="ico-suspension-status"></span></h2>
+                                                    <h3 class="pl-md-3  pb-3 pb-md-0">ISN 74562bfk</h3>
+                                                    <span class="d-flex pb-4 pb-md-0 pl-md-3"><i class="ico-week mr-2"></i><span class="d-sm-none d-md-block">Week Total:</span>70.00 hrs</span>
+                                                </div>
+                                                <div class="col-md-6 order-4 ml-auto order-md-3 justify-content-md-end box-down">
+                                                    <div class="d-md-inline-flex d-flex justify-content-between justify-content-md-end activity-emp-box">
+                                                        <span class="txt-primary txt-activity pr-md-4">2 Activities</span>
+                                                        <span class="txt-secondary txt-activity"><i class="ico-day mr-2"></i> 10.00 hrs</span>
+                                                        <a href="" class="lnk-update pl-md-5  "><span class="d-sm-none d-md-inline-block">Total:</span> 11.00 hrs</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 col-6 col-btn-toggle order-2 order-md-4 text-right pl-0">
+                                                    <div class="form-group pr-md-5">  
+                                                        <a href="" class="ico-close-gray mr-2"></a>
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-2">
+                                                        <label for="switch-sm-2"></label>
+                                                        </span>
+                                                    </div>
+                                                    <a href="" class="lnk-hours-list d-none d-md-none d-md-block"></a>
+                                                </div>
+                                                <div class="col-md-12 order-5">
+                                                    <ul class="acivity-view  d-flex flex-column">
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Jet lance slurry lines</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                        <li class="d-md-inline-flex d-flex row pt-4">
+                                                            <span class="col-10">A12311 Vaccum out primary air duct</span>
+                                                            <span class="col-2 text-right text-md-left txt-hrs">5 Hrs</span>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="" class="lnk-hours-list mt-4 d-block d-md-none"></a>
+                                                </div>
+                                            </div>
+                                    </li>
                                 </ul>
 
 
@@ -278,7 +532,7 @@
                                                         <div class="col-6 col-md-8"><span class="txt-secondary txt-activity"><i class="ico-week mr-2"></i> 70.00 hrs</span></div>
                                                         <div class="col-6 col-md-4"><span class="txt-secondary txt-activity">Total:</span><span class="pl-3 txt-primary ">10.00 hrs</span></div>
                                                     </div>
-                                                    <div class="row mt-5 align-items-center">
+                                                    <div class="row mt-3 align-items-center">
                                                         <div class="col-3 txt-aprov-day">Comment</div>
                                                         <div class="col-9 text-right">
                                                             <div class="select mb-0">
@@ -288,10 +542,15 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row mt-5">
+                                                    <div class="row mt-3 align-items-center">
+                                                        <div class="col-12 text-right">
+                                                            <input type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
                                                         <div class="col-8 txt-aprov-day">Approve hours for this day</div>
                                                         <div class="col-4 text-right">
-                                                            <div class="form-group">  
+                                                            <div class="form-group m-0">  
                                                                 <span class="switch switch-lg">
                                                                 <input type="checkbox" class="switch" id="switch-aprv-day">
                                                                 <label for="switch-aprv-day"></label>
@@ -299,10 +558,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-8 txt-aprov-day">Reject hours for this shift</div>
+                                                        <div class="col-4 text-right">
+                                                            <a href="" class="ico-close-gray"></a>
+                                                        </div>
+                                                    </div>
                                                     
                                                 </div>
                                             </div>
-                                            <div class="modal-footer d-flex mt-5 text-right">
+                                            <div class="modal-footer d-flex text-right">
                                               <button type="button" class="btn btn-time-primary btn-time">Save</button>
                                             </div>
                                           </div>
@@ -392,7 +657,7 @@
                                                     <div class="col-6 col-md-8"><span class="txt-secondary txt-activity"><i class="ico-week mr-2"></i> 70.00 hrs</span></div>
                                                     <div class="col-6 col-md-4"><span class="txt-secondary txt-activity">Total:</span><span class="pl-3 txt-primary ">10.00 hrs</span></div>
                                                 </div>
-                                                <div class="row mt-5 align-items-center">
+                                                <div class="row mt-3 align-items-center">
                                                     <div class="col-3 txt-aprov-day">Comment</div>
                                                     <div class="col-9 text-right">
                                                         <div class="select mb-0">
@@ -402,10 +667,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row mt-5">
+                                                <div class="row mt-3">
                                                     <div class="col-8 txt-aprov-day">Approve hours for this day</div>
                                                     <div class="col-4 text-right">
-                                                        <div class="form-group">  
+                                                        <div class="form-group m-0">  
                                                             <span class="switch switch-lg">
                                                             <input type="checkbox" class="switch" id="switch-aprv-day">
                                                             <label for="switch-aprv-day"></label>
@@ -413,10 +678,16 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-8 txt-aprov-day">Reject hours for this shift</div>
+                                                    <div class="col-4 text-right">
+                                                        <a href="" class="ico-close-gray"></a>
+                                                    </div>
+                                                </div>
                                                 
                                             </div>
                                         </div>
-                                        <div class="modal-footer d-flex mt-5 justify-content-between modal-footer-multi">
+                                        <div class="modal-footer d-flex justify-content-between modal-footer-multi">
                                           <button type="button" class="btn btn-time-secondary btn-time">Save</button>
                                           <button type="button" class="btn btn-time-primary btn-time">Save & Next</button>
                                           <button type="button" class="btn btn-time-primary btn-time">Save & New</button>
@@ -460,7 +731,7 @@
                             <div class="tab-pane fade" id="pills-contractors" role="tabpanel" aria-labelledby="contractors-tab">
                                 <div class="tab-filter row pt-3 mb-3">
                                     <div class=" col-md-8 mr-md-auto pt-4">
-                                        <div class="date-picker disabled-area week-picker-contactor d-flex justify-content-between justify-content-md-start">
+                                        <div class="date-picker  week-picker-contactor d-flex justify-content-between justify-content-md-start">
                                             <button class="prev-day btn" id="previous-day"></button>
                                             <input type="hidden" name="contractor-calender" value="" id="contractor-calender">
                                             <label class="week-picker-contract" for="contractor-calender">All Unreviewed</label>
@@ -471,6 +742,7 @@
                                                     <label for="show-all">Show all unreviewed</label>
                                                 </div>
                                                 <span id="datepicker-contract"></span>
+                                                <input id="datepicker-contract-ip" type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -511,8 +783,10 @@
                                     <li class="card mb-4">
                                         <div class="row">
                                             <div class="col-md-4 col-9 order-1 order-md-1 d-md-flex align-items-md-center">
-                                                <h2 class="mb-md-0">ABC Welding Company</h2>
-                                                <span class="spn-contract-date pl-md-3">10 Sep 2020</span>
+                                                <a href="" class="d-flex align-items-center lnk-contactor-title">
+                                                    <h2 class="mb-md-0">ABC Welding Company</h2>
+                                                    <span class="spn-contract-date pl-md-3">10 Sep 2020</span>
+                                                </a>
                                             </div>
                                             <div class="col-md-7 col-12 order-3 order-md-3 mt-3 mt-md-0 ">
                                                 <div class=" d-flex flex-md-row flex-column justify-content-md-end align-items-md-center">
@@ -611,15 +885,23 @@
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="pills-activities" role="tabpanel" aria-labelledby="activities-tab">
-                                <div class="tab-filter row pt-3 mb-3">
-                                    <div class=" col-md-8 mr-md-auto pt-4">
-                                        <div class="date-picker d-flex week-picker-activities justify-content-between justify-content-md-start">
+                                <div class="tab-filter row pt-3 mb-3 justify-content-between">
+                                    <div class="col-md-8 d-flex align-items-center flex-column flex-md-row mt-4 mt-md-0">
+                                        <div class="date-picker d-flex week-picker-employee justify-content-between justify-content-md-start">
                                             <button class="prev-day btn" id="previous-day"></button>
                                             <input class="week-picker">
                                             <button class="next-day btn" id="next-day"> </button>
                                         </div>
+                                        <div class="day-night-chk ml-md-4 mt-4 mt-md-0 mr-0 ml-0">
+                                            <div class="toggle-container d-flex">
+                                                <input id="toggle-on1" class="toggle toggle-left checked" name="toggle" type="radio" checked="">
+                                                <label for="toggle-on1" class="btn day-radio-btn"><span class="d-flex"><i class="ico-day mr-2"></i>Day</span></label>
+                                                <input id="toggle-off1" class="toggle toggle-right" name="toggle" type="radio">
+                                                <label for="toggle-off1" class="btn night-radio-btn"><span class="d-flex"><i class="ico-night mr-2"></i>Night</span></label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 d-flex justify-content-end pt-4">
+                                    <div class="col-md-4 flex-column flex-md-row d-flex pt-4">
                                         <div class="select mr-md-3">
                                             <select name="" id="">
                                                 <option value="">All Projects</option>
@@ -637,52 +919,240 @@
                                 <div class="tab-filter-info ">
                                     <div class="row">
                                         <div class="col-md-4 col-12 order-1 order-md-1">
-                                            <h2>2 <br> Activity</h2>
+                                            <h2>3 <br> Activity</h2>
                                         </div>
                                         <div class="col-md-4 col-6 order-3 order-md-2">
                                             <strong class="txt-bold">18.50 <small class="txt-small">hrs</small></strong><br>
-                                            <span>Daily total</span>
+                                            <span>Hours clocked</span>
                                         </div>
                                         <div class="col-md-4 col-6 order-4 order-md-3">
                                             <strong class="txt-bold">209.5 <small class="txt-small">hrs</small></strong>
                                             <br>
-                                            <span>Project total</span>
+                                            <span>Daiy total entered</span>
                                         </div>
                                         
                                     </div>
                                 </div>
                                 <hr class="divider">
-                                <ul class="card-list activity-list">
+                                <ul class="card-list activity-card-list">   
                                     <li class="card mb-4">
                                         <div class="row">
-                                            <div class="col-md-6 col-12 order-1 order-md-1">
-                                                <h2>A12311 jet lance slurry lines</h2>
-                                            </div>
-                                            <div class="col-md-6 order-3 order-md-2 mt-md-0 mb-md-0 mt-4  d-flex clock-time">
-                                                <span class="d-flex pr-md-5 col-6 flex-column flex-md-row">Daily total <strong>12.50 hrs</strong></span>
-                                                <span class="d-flex col-6 flex-column flex-md-row">Project total <strong>122.00 hrs</strong></span>
+                                            <div class="col-md-4 col-9 order-1 mb-3 mb-md-0">
+                                                <h2>Inspect / UT 2nd Pass - (Tech Std 303-4)</h2>
+                                            </div>  
+                                            <div class="col-md-2 col-6 order-3 order-md-2">
+                                                <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Hours Worked:</span>15.50 hrs</span> 
+                                            </div>  
+                                            <div class="col-md-2  col-6 order-4 order-md-3">
+                                                <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Remaining:</span>35.00 hrs</span> 
+                                            </div>  
+                                            <div class="col-md-3 order-5 order-md-4 mt-3 mt-md-0">
+                                                <span class="txt-primary-sec txt-activity"><span>Est Complete:</span>2020-10-22</span> 
+                                                <i class="ico-green-tick"></i>
+                                            </div>  
+                                            <div class="col-md-1 col-3 text-right order-md-5 order-2 pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-1">
+                                                    <label for="switch-sm-1"></label>
+                                                    </span>
+                                                </div>
+                                            </div>                               
+                                        </div>
+                                    </li>   
+                                    <li class="card mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4 col-9 order-1 mb-3 mb-md-0">
+                                                <h2>Inspect / UT 2nd Pass - (Tech Std 303-4)</h2>
+                                            </div>  
+                                            <div class="col-md-2 col-6 order-3 order-md-2">
+                                                <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Hours Worked:</span>15.50 hrs</span> 
+                                            </div>  
+                                            <div class="col-md-2  col-6 order-4 order-md-3">
+                                                <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Remaining:</span>35.00 hrs</span> 
+                                            </div>  
+                                            <div class="col-md-3 order-5 order-md-4 mt-3 mt-md-0">
+                                                <span class="txt-primary-sec txt-activity"><span>Est Complete:</span>2020-10-22</span> 
+                                            </div>  
+                                            <div class="col-md-1 col-3 text-right order-md-5 order-2 pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-2">
+                                                    <label for="switch-sm-2"></label>
+                                                    </span>
+                                                </div>
+                                            </div>                               
+                                        </div>
+                                    </li>   
+                                    <li class="card mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4 col-9 order-1 mb-3 mb-md-0">
+                                                <h2>Inspect / UT 2nd Pass - (Tech Std 303-4)</h2>
+                                            </div>  
+                                            <div class="col-md-2 col-6 order-3 order-md-2">
+                                                <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Hours Worked:</span>15.50 hrs</span> 
+                                            </div>  
+                                            <div class="col-md-2  col-6 order-4 order-md-3">
+                                                <span class="txt-primary-sec txt-activity"><span class="d-block d-md-inline">Remaining:</span>35.00 hrs</span> 
+                                            </div>  
+                                            <div class="col-md-3 order-5 order-md-4 mt-3 mt-md-0">
+                                                <span class="txt-primary-sec txt-activity"><span>Est Complete:</span>2020-10-22</span> 
+                                                <i class="ico-green-tick"></i>
+                                            </div>  
+                                            <div class="col-md-1 col-3 text-right order-md-5 order-2 pl-0">
+                                                <div class="form-group mb-0">  
+                                                    <span class="switch switch-lg">
+                                                    <input type="checkbox" class="switch" id="switch-sm-3">
+                                                    <label for="switch-sm-3"></label>
+                                                    </span>
+                                                </div>
+                                            </div>                               
+                                        </div>
+                                    </li>   
+                                </ul>
+
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update-activity">
+                                    update activity status
+                                  </button>
+                                  <div class="modal fade" id="update-activity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header mb-5">
+                                          <h4 class="modal-title" id="myModalLabel">Update activity status</h4>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        <div class="modal-body p-0">
+                                            <div class="pl-4 mb-5">
+                                                <h3 class="modal-title">Inspect / UT 2nd Pass - (Tech Std 303-4)</h3>
                                             </div>
                                             
+                                          <form>
+                                              <div class="form-group d-flex">
+                                                <label for="" class="col-sm-4 col-5 col-form-label">2020-10-22</label>
+                                                  <div class="col-md-8 col-7">
+                                                    <div class="day-night-chk ml-0">
+                                                        <div class="toggle-container d-flex">
+                                                            <input id="toggle-on2" class="toggle toggle-left checked" name="toggle" type="radio" checked="">
+                                                            <label for="toggle-on2" class="btn day-radio-btn"><span class="d-flex"><i class="ico-day mr-2"></i>Day</span></label>
+                                                            <input id="toggle-off2" class="toggle toggle-right" name="toggle" type="radio">
+                                                            <label for="toggle-off2" class="btn night-radio-btn"><span class="d-flex"><i class="ico-night mr-2"></i>Night</span></label>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                              <div class="form-group d-flex">
+                                                <label for="" class="col-sm-4 col-5 col-form-label">Hours worked</label>
+                                                <div class="col-sm-8 col-7">
+                                                  <input type="text" class="form-control">
+                                                </div>
+                                              </div>
+                                              <div class="form-group d-flex">
+                                                <label for="" class="col-sm-4 col-5 col-form-label">Hours remaining</label>
+                                                <div class="col-sm-8 col-7">
+                                                  <input type="text" class="form-control" id="" placeholder="">
+                                                </div>
+                                              </div>
+                                              <div class="form-group d-flex">
+                                                <label for="" class="col-sm-4 col-5 col-form-label">Estimated completion date</label>
+                                                <div class="col-sm-8 col-7 align-self-center">
+                                                    <div class="date-picker date-picker-popup  justify-content-between justify-content-md-start">
+                                                        <input class="week-picker">
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="form-group d-flex justify-content-end">
+                                                <div class="col-sm-8"><label for="" class=" col-form-label text-center">OR</label></div>
+                                              </div>
+                                              <div class="form-group d-flex">
+                                                <label for="" class="col-sm-4 col-5 col-form-label">Activity complete</label>
+                                                <div class="col-sm-8 col-7">
+                                                    <div class="form-group mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-a1">
+                                                        <label for="switch-sm-a1"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="d-flex">
+                                                <div class="col-sm-12">
+                                                    <hr class="divider">
+                                                </div>
+                                              </div>
+                                              
+                                              <div class="form-group d-flex">
+                                                <label for="" class="col-sm-4 col-5 col-form-label">Submit activity</label>
+                                                <div class="col-sm-8 col-7">
+                                                    <div class="form-group mb-0">  
+                                                        <span class="switch switch-lg">
+                                                        <input type="checkbox" class="switch" id="switch-sm-a2">
+                                                        <label for="switch-sm-a2"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                          </form>
                                         </div>
-                                    </li>
-                                    <li class="card mb-4">
-                                        <div class="row">
-                                            <div class="col-md-6 col-12 order-1 order-md-1">
-                                                <h2>A12311 Vaccum out primary air duct</h2>
-                                            </div>
-                                            <div class="col-md-6 order-3 order-md-2 mt-md-0 mb-md-0 mt-4 d-flex clock-time">
-                                                <span class="d-flex pr-md-5 col-6 flex-column flex-md-row">Daily total <strong>6.00 hrs</strong></span>
-                                                <span class="d-flex col-6 flex-column flex-md-row">Project total <strong>87.50 hrs</strong></span>
-                                            </div>
+                                        <div class="modal-footer d-flex mt-5 justify-content-between modal-footer-multi">
+                                            <button type="button" class="btn btn-time-primary btn-time">Save</button>
+                                            <button type="button" class="btn btn-time-primary btn-time">Save & Next</button>
                                         </div>
-                                    </li>
-                                </ul>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
         </div>
+
+         <!-- Modal -->
+         <div class="modal fade" id="chngpwd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header mb-5">
+                <h5 class="modal-title" id="exampleModalLabel">Reset Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container login-form">
+                        <form class="row align-items-center" action="http://localhost:41989/Login/ResetPassword" method="post">
+                            <div class="validate-input">
+                                <input class="" type="password" name="password-new" placeholder="Current Password" id="curr-pwd">
+                                <span class="focus-input ico-user-pwd"></span>
+                                <span class="error-msg" id="empty-curr-pwd">Current Password is required</span>
+                                <span class="error-msg" id="invalid-curr-pwd">Current Password entered is invalid</span>
+                                <input class="" type="hidden" name="curr-pwd-val" id="curr-pwd-val" value="123">
+                            </div>
+            
+                            <div class="validate-input">
+                                <input class="" type="password" name="password-new" placeholder="New Password" id="new-pwd">
+                                <span class="focus-input ico-user-pwd"></span>
+                                <span class="error-msg" id="empty-new-pwd">New Password is required</span>
+                            </div>
+            
+                            <div class="validate-input">
+                                <input class="" type="password" name="password-confirm" placeholder="Confirm Password" id="conf-pwd">
+                                <span class="focus-input ico-user-pwd"></span>
+                                <span class="error-msg" id="empty-conf-pwd">Confirm Password is required</span>
+                                <span class="error-msg" id="pwd-match">New Password and Confirm Password do not match</span>
+                            </div>
+            
+                            <div class="container-login-form-btn mb-4 d-flex pt-4">
+                                <button class="btn btn btn-time-primary btn-time mr-3" id="btnOK">Ok</button>
+                                <button class="btn btn btn-time-secondary btn-time">Cancel</button>
+                            </div>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KgHlzhxU49El4lO3oq_UeyzEnZiHevC_wvrT3Wc0TMW-XQi_Qt_pqn7ETO0yT96BJGRTMdSy8DsjXk-WMIiEuzRB9_24AztO0iqo4QVgLs_vTVyz9zd0ypioSQKehFNRcn1wEGan0_4L8iRl7s5bPw"></form>
+                    </div>
+                </div>
+    
+            </div>
+            </div>
+        </div>
+
         <!-- <div class="loader">
             <img src="images/loader.svg">
         </div> -->
