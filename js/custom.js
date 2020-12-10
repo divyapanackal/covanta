@@ -11,7 +11,14 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).closest(".row").toggleClass("open");
     var body = $("html, body");
-    body.stop().animate({scrollTop:$(this).closest(".row").offset().top - 110}, 500, 'swing', function() {});
+    body
+      .stop()
+      .animate(
+        { scrollTop: $(this).closest(".row").offset().top - 110 },
+        500,
+        "swing",
+        function () {}
+      );
   });
   $("input[type='number']").inputSpinner({
     buttonsClass: "",
@@ -125,9 +132,9 @@ $(document).ready(function () {
   });
 
   // $( "#datepicker-contract" ).datepicker( "show" );
-//   $('#datepicker-contract-ip').change(function(){
-//     $('#datepicker-contract').datepicker('setDate', $(this).val());
-// });
+  //   $('#datepicker-contract-ip').change(function(){
+  //     $('#datepicker-contract').datepicker('setDate', $(this).val());
+  // });
 
   // $(document).on("click",".week-picker-contactor #previous-day",function() {
   //   var currDate = new Date($("#datepicker-contract").datepicker("getDate"));
@@ -146,21 +153,17 @@ $(document).ready(function () {
     $(".week-picker-contactor .week-picker-contract").html(dateVal);
   });
 
-$(".week-picker-contactor #next-day").click(function () {
-  var currDate = new Date($("#datepicker-contract").datepicker("getDate"));
-  currDate.setDate(currDate.getDate() + 1);
-  $("#datepicker-contract").datepicker("setDate", currDate);
-  var dateVal = $("#datepicker-contract").val();
+  $(".week-picker-contactor #next-day").click(function () {
+    var currDate = new Date($("#datepicker-contract").datepicker("getDate"));
+    currDate.setDate(currDate.getDate() + 1);
+    $("#datepicker-contract").datepicker("setDate", currDate);
+    var dateVal = $("#datepicker-contract").val();
     $(".week-picker-contactor .week-picker-contract").html(dateVal);
-});
-
-
-
+  });
 
   $(".week-picker-contract").click(function () {
     $(".calender-popup").addClass("active");
   });
-
 
   $(document).click(function (event) {
     if (
@@ -170,26 +173,25 @@ $(".week-picker-contactor #next-day").click(function () {
     }
   });
 
-  $(".calender-popup").click(function(e){
+  $(".calender-popup").click(function (e) {
     e.stopPropagation();
   });
 
-  if($(".calender-popup #show-all").is(":checked")) {
-    $(".week-picker-contactor #datepicker-contract-ip").val('000-2-2');
+  if ($(".calender-popup #show-all").is(":checked")) {
+    $(".week-picker-contactor #datepicker-contract-ip").val("000-2-2");
   }
-
 
   $(".calender-popup #show-all").click(function () {
     if ($(this).is(":checked")) {
       $(".calender-popup").addClass("chk-box-all"); // checked
-      $(".week-picker-contactor .week-picker-contract").text('All Unreviewed');
-      $(".week-picker-contactor #datepicker-contract-ip").val('000-2-2');
+      $(".week-picker-contactor .week-picker-contract").text("All Unreviewed");
+      $(".week-picker-contactor #datepicker-contract-ip").val("000-2-2");
     } else {
       $(".calender-popup").removeClass("chk-box-all"); // unchecked
     }
   });
 
-  console.log($(".week-picker-contactor #datepicker-contract-ip").val())
+  console.log($(".week-picker-contactor #datepicker-contract-ip").val());
 
   $(
     ".week-picker-activities .week-picker, .week-picker-employee  .week-picker,.modal .week-picker"
@@ -203,18 +205,22 @@ $(".week-picker-contactor #next-day").click(function () {
     $(this).find("td a").removeClass("ui-state-hover");
   });
 
-  $(".week-picker-employee #previous-day,.week-picker-activities #previous-day").click(function () {
-      console.log("her")
+  $(
+    ".week-picker-employee #previous-day,.week-picker-activities #previous-day"
+  ).click(function () {
+    console.log("her");
     var currDate = new Date($(".week-picker").datepicker("getDate"));
     currDate.setDate(currDate.getDate() - 1);
     $(".week-picker").datepicker("setDate", currDate);
   });
 
-  $(".week-picker-employee #next-day,.week-picker-activities #next-day").click(function () {
-    var currDate = new Date($(".week-picker").datepicker("getDate"));
-    currDate.setDate(currDate.getDate() + 1);
-    $(".week-picker").datepicker("setDate", currDate);
-  });
+  $(".week-picker-employee #next-day,.week-picker-activities #next-day").click(
+    function () {
+      var currDate = new Date($(".week-picker").datepicker("getDate"));
+      currDate.setDate(currDate.getDate() + 1);
+      $(".week-picker").datepicker("setDate", currDate);
+    }
+  );
 
   // Day Nght toggle switch
   $(".day-night-chk").on("change", 'input[type="radio"].toggle', function () {
@@ -228,85 +234,78 @@ $(".week-picker-contactor #next-day").click(function () {
   });
   $('.day-night-chk input[type="radio"].toggle:checked').addClass("checked");
 
-  $('.btn-time-add').click(function(e) {
+  $(".btn-time-add").click(function (e) {
     e.preventDefault();
-    $('.assignment-wrap').addClass('add');
+    $(".assignment-wrap").addClass("add");
   });
-  $('.ico-back').click(function(e) {
+  $(".ico-back").click(function (e) {
     e.preventDefault();
-    $('.assignment-wrap').removeClass('add');
+    $(".assignment-wrap").removeClass("add");
   });
 
   if (window.location.href.indexOf("Asignment") > -1) {
     if ($('.header-menu li a:contains("Assignment")')) {
-      $('.header-menu li a:contains("Assignment")').addClass('active');
+      $('.header-menu li a:contains("Assignment")').addClass("active");
     }
   }
   if (window.location.href.indexOf("Employee") > -1) {
     if ($('.header-menu li a:contains("Timecard")')) {
-      $('.header-menu li a:contains("Timecard")').addClass('active');
+      $('.header-menu li a:contains("Timecard")').addClass("active");
     }
   }
-
 
   /**
    * help page: menu
    */
 
-  $('.menu-btn').click(function (evt) {
+  $(".menu-btn").click(function (evt) {
     evt.stopPropagation();
-    $('.left-sticky').toggleClass('show-menu');
+    $(".left-sticky").toggleClass("show-menu");
   });
 
-
-  $('body,html').click(function (e) {
+  $("body,html").click(function (e) {
     var container = $(".left-sticky");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.removeClass('show-menu');
+      container.removeClass("show-menu");
     }
   });
 
-
-
-  $('#list-tab a').on('click', function (e) {
+  $("#list-tab a").on("click", function (e) {
     e.preventDefault();
-    var target = $(this).attr('href');
-    $(this).tab('show');
-    setTimeout(function(){ 
-      $('.left-sticky').removeClass('show-menu');
+    var target = $(this).attr("href");
+    $(this).tab("show");
+    setTimeout(function () {
+      $(".left-sticky").removeClass("show-menu");
     }, 500);
-    $("html, body").animate({ 
-      scrollTop: $(target).offset().top 
-    }, "slow");
+    $("html, body").animate(
+      {
+        scrollTop: $(target).offset().top,
+      },
+      "slow"
+    );
   });
-  
 
-  $('#list-tab > li > a[href="#contractor"]').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show');
-    $('#list-tab a[href="#add-worker"]').tab('show');
-  })
+  $('#list-tab > li > a[href="#contractor"]').on("click", function (e) {
+    e.preventDefault();
+    $(this).tab("show");
+    $('#list-tab a[href="#add-worker"]').tab("show");
+  });
 
-  $('#list-tab > li > a[href="#supervisor"]').on('click', function (e) {
-    e.preventDefault()
-    $(this).tab('show');
-    $('#list-tab a[href="#review-submitted"]').tab('show');
-  })
+  $('#list-tab > li > a[href="#supervisor"]').on("click", function (e) {
+    e.preventDefault();
+    $(this).tab("show");
+    $('#list-tab a[href="#review-submitted"]').tab("show");
+  });
 
-$('.toggle').on('click', function (e) {
-  e.stopPropagation();
-  $('body').toggleClass('open-menu');
+  $(".toggle").on("click", function (e) {
+    e.stopPropagation();
+    $("body").toggleClass("open-menu");
+  });
+  $("#left-main-nav").on("click", function (event) {
+    event.stopPropagation();
+  });
 });
-$("#left-main-nav").on("click", function (event) {
-  event.stopPropagation();
-});
-
-
-  
-
-});
-
 
 $(document).on("click", function () {
-  $('body').removeClass('open-menu');
+  $("body").removeClass("open-menu");
 });
