@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timecard - User Manual</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style-ui.css">
+        <link rel="stylesheet" href="css/datatables.min.css">
+        <link rel="stylesheet" href="css/select2.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div>
+            <main style="padding: 0;" class="help-wrapper">
+                <div class="container-fluid main-container">                    
+                    <div class="row help-content">
+                        <div class="col-md-3 col-xl-2 pt-5 border-right left-sticky">
+                            
+                            <!-- <input id="menu-toggle" type="checkbox" /> -->
+                            <label class="menu-btn" for="menu-toggle">
+                              <span></span>
+                            </label>                            
+                            <div class="menu-box">
+                                <h3 class="mb-3">Contents</h3>
+                                <ul id="list-tab" class="list-group nav" role="tablist">
+                                    <li><a class="nav-link active" id="list-home-list" data-toggle="list" href="#timesheet" role="tab" aria-controls="v-pills-time" aria-selected="true">CCM Timesheet Application</a>
+                                    <li><a class="nav-link" id="list-login-list" data-toggle="list" href="#login" role="tab" aria-controls="v-pills-login" aria-selected="false">Login</a>
+                                    <li><a class="nav-link sub-nav" id="list-contractor-list" data-toggle="list" href="#contractor" role="tab" aria-controls="v-pills-contractor" aria-selected="false">Contractor</a>
+                                        <ul class="pl-4 list-group nav" role="tablist">
+                                            <li><a class="nav-link active" role="tab" data-toggle="list" href="#add-worker"  aria-selected="true">Add Worker</a></li>
+                                            <li><a class="nav-link" role="tab" data-toggle="list" href="#submit-time" aria-selected="false">Submit Time</a></li>
+                                            <li><a class="nav-link" role="tab" data-toggle="list" href="#add-new" aria-selected="false">Add New Timecard</a></li>
+                                            <li><a class="nav-link" role="tab" data-toggle="list" href="#unapproved" aria-selected="false">See Unapproved Timecards</a></li>
+                                            <li><a class="nav-link" role="tab" data-toggle="list" href="#view-rejected" aria-selected="false">View and Correct Rejected Time</a></li>
+                                        </ul>
+                                    </li>
+                                   <li><a  class="nav-link sub-nav" id="list-supervisor-list" data-toggle="list" href="#supervisor" role="tab" aria-controls="v-pills-supervisor" aria-selected="false">Supervisor</a>
+                                        <ul class="pl-4 list-group nav"  role="tablist">
+                                            <li><a a class="nav-link active" data-toggle="list" href="#review-submitted" aria-selected="true">Review Submitted Time</a></li>
+                                            <li><a class="nav-link" role="tab" data-toggle="list" href="#review-submitted-reject" aria-selected="false">Reject Time</a></li>
+                                            <li><a class="nav-link" role="tab" data-toggle="list" href="#add-worker-review" aria-selected="false">Add Worker</a></li>
+                                        </ul>
+                                    </li> 
+                                    <li>
+                                        <a class="nav-link sub-nav" id="list-miscellaneous-list" data-toggle="list" href="#miscellaneous" role="tab" aria-controls="v-pills-miscellaneous" aria-selected="false">Miscellaneous Info</a>
+                                        <ul class="pl-4 list-group nav" role="tablist">
+                                            <li><a a class="nav-link active" data-toggle="list" href="#page-info" aria-selected="true">Timecard Page Information</a></li>
+                                        </ul>
+                                    </li>
+    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-xl-10 pl-md-5 pt-5 pb-4">
+                            <div class="container">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="timesheet"  role="tabpanel" aria-labelledby="list-home-list">
+                                        <h2 class="mb-3">CCM Timesheet Application</h2>
+                                        <p>The CCM Timesheet application is used by two user groups:</p>
+                                        <ul class="mb-3">
+                                            <li>Contractor Foremen to review and submit their worker’s time.</li>
+                                            <li>Covanta Supervisors to approve or reject submitted time. </li>
+                                        </ul>
+                                        <p>Workers must be entered into ISNet before the outage begins.   The Contractor Foreman is expected to add the workers for an outage prior to the outage beginning. </p>
+                                        <p>At the end of each shift, the Contractor Foreman should review all their worker’s time, correct as needed and submit it to Covanta. </p>
+                                        <p>Most worker’s time should be captured by the time clocks at the facility.  If the worker’s time is not captured through the clocks, the Contractor Foreman can manually enter it. </p>
+                                        <p>The Covanta Supervisor will review the submitted time and either mark it approved or rejected.  If rejected the Contractor Foreman must correct it and resubmit the time for approval. </p>
+                                        </p>
+                                        <img src="images/help/time-sheet.png" alt="" class="mt-4 img-1">
+                                    </div>
+                                    <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="list-login-list">
+                                        <h2 class="mb-3">Login</h2>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <ol class="pl-4 pb-4">
+                                                    <li>Enter User Name</li>
+                                                    <li>Enter Password</li>
+                                                    <li>Click Login</li>
+                                                </ol>
+                                                <img src="images/help/login.png" alt="" style="width: auto;">
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="tab-pane fade" id="contractor" role="tabpanel" aria-labelledby="list-login-list">
+                                        <h2 class="mb-3">Contractor</h2>
+                                        <p>The Contractor Foreman has the ability to do the following: </p>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <ol class="pl-4 pb-4">
+                                                    <li> Add Workers to Outage</li>
+                                                    <li>Submit Time </li>
+                                                    <li>Add New Timecard</li>
+                                                    <li>Review Unapproved Timecards</li>
+                                                    <li>Review Rejected Timecard</li>
+                                                </ol>
+                                                <div class="tab-content">
+                                                    <div id="add-worker" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">Add Worker</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Go to Assignment Page</h4>
+                                                                <img src="./images/help/add-1.png" style="width: 300px;"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: Review Assigned Workers</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <div class="col-4 pl-0"><img src="./images/help/assigned.png" style="width: 300px;"/></div>
+                                                                    <div class="col-8">
+                                                                        <ol class="pl-4">
+                                                                            <li>Confirm correct project/outage</li>
+                                                                            <li>Click Add to add a new worker to this project.</li>
+                                                                        </ol>
+                                                                        <br>
+                                                                        <p><img src="./images/help/dot.png" style="width:50px"/> The dark blue bar shows the number of workers assigned to this outage. </p>
+                                                                        <p><img src="./images/help/dot.png" style="width:50px"/> This has the list of workers assigned.</p>
+                                                                        <p><img src="./images/help/clock.png" style="width:50px"/> Worker has timecards for this project. </p>
+                                                                        <p><img src="./images/help/delete.png" style="width:50px"/> Remove this worker from this outage. </p>
+                                                                        <p><img src="./images/help/worker.png" style="width:50px"/> Worker is not trained.  </p>
+                                                                        <p><img src="./images/help/close-1.png" style="width:50px"/> Worker is not trained.  </p>
+                                                                        <p><img src="./images/help/qq.png" style="width:50px"/> Worker is not trained.  </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4 class="pt-5">Step 3: Add New Worker</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <div class="col-4 pl-0">
+                                                                        <img src="./images/help/new-wrker.png" style="width: 300px;"/>
+                                                                    </div>
+                                                                    <div class="col-8">
+                                                                        <ol class="pl-4">
+                                                                            <li>Select Workers to add</li>
+                                                                            <li>Click Save</li>
+                                                                        </ol>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="submit-time" class="tab-pane fade" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">Submit Time</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Review All Workers for the Day</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/submit-1.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>Pick the day</li>
+                                                                        <li> Pick the project</li>
+                                                                        <li> Click Assign to review time</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: For Each Worker, review and correct their time, then submit</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/submit-2.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>Confirm the hours</li>
+                                                                        <li>Confirm the activity – should be “Unspecified”. </li>
+                                                                        <li>Submit hours for this worker</li>
+                                                                        <li>Save and move to the next worker or Save and return</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                            <h4 class="mt-5">Step 3: Correct Time for a Worker</h4>
+                                                            <div class="d-lg-flex">
+                                                                <img src="./images/help/submit-3.png" style="width: 300px;"/>
+                                                                <ol class="pl-5 ml-5">
+                                                                    <li>If hours are wrong.</li>
+                                                                    <li>Use + or – to change, or type in a number. </li>
+                                                                    <li>Provide Reason why hours were changed</li>
+                                                                    <li>Submit the hours</li>
+                                                                </ol>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="add-new" class="tab-pane fade" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">Add New Timecard</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Click “+” to add a new timecard</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/time-card-1.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>Click the + to add a timecard for a worker not listed in the project.</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: Add Timecard for Worker</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/time-card-2.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>Confirm date and shift</li>
+                                                                        <li>Choose the worker</li>
+                                                                        <li>Enter hours</li>
+                                                                        <li>Select Reason worker did not have clock hours</li>
+                                                                        <li>Enter any additional detail</li>
+                                                                        <li>Submit hours</li>
+                                                                        <li>Save</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="unapproved" class="tab-pane fade" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">See Unapproved Timecards</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Click “+” to add a new timecard</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/unapproved.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>Click Time Review</li>
+                                                                        <li>Shows all submitted timecards that Covanta has not approved.</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="view-rejected" class="tab-pane fade" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">View and Correct Rejected Time</h3>
+                                                        <p>The Covanta Site Supervisor can reject time that has been submitted. When rejected, the timecard will appear on the foreman’s list for them to correct the time.</p>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Correct Workers for a Day</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/view-1.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>Pick the date.</li>
+                                                                        <li>Pick the project.</li>
+                                                                        <li>The “X” appears for Rejected timecards</li>
+                                                                        <li>Click the worker name to correct their timesheet. </li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: For Rejected Timecard, review and correct their time, then submit</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/view-2.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5">
+                                                                        <li>If hours are wrong. </li>
+                                                                        <li>Use + or – to change, or type in a number.</li>
+                                                                        <li>Provide Reason why hours were changed</li>
+                                                                        <li>Submit the hours</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="tab-pane fade" id="supervisor" role="tabpanel" aria-labelledby="list-login-list">
+                                        <h2 class="mb-3">Supervisor</h2>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="tab-content">
+                                                    <div id="review-submitted" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">Review Submitted Time</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Choose Day, Outage and Contractor</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/view-s-1.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5 col-md-6">
+                                                                        <li>Pick Project</li>
+                                                                        <li>Pick Contractor</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: Review what has been submitted and is ready for review</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/view-s-2.png" style="width: 300px;"/>
+                                                                    <div class="col-md-8">
+                                                                        <ol class="pl-5 ml-5 ">
+                                                                            <li>Pick All Unreviewed to all submitted timecards that are ready for your review. </li>
+                                                                            <li>Review the number of hours that have been submitted and are ready. </li>
+                                                                            <li>List of contractors and how hours are ready to be submitted.</li>
+                                                                        </ol>
+                                                                        <p class="pl-5 ml-5 mt-4"><img src="./images/help/date.png" style="width:50px"/> Click here to pick a specific date.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 3: Approve Hours</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/view-s-3.png" style="width: 300px;"/>
+                                                                    <div class="col-md-8">
+                                                                        <ol class="pl-5 ml-5 ">
+                                                                            <li>Shows how many hours need to be reviewed/approved.  </li>
+                                                                            <li>Click here to review and approve the timesheets for this contractor.</li>
+                                                                        </ol>
+                                                                        <div class="pl-5 ml-5 mt-4">
+                                                                            <p ><img src="./images/help/date.png" style="width:50px"/> The clock icon shows how many hours were reported by the time clock.</p>
+                                                                        <p><img src="./images/help/dot.png" style="width:50px"/> This contractor has entered hours, but have NOT submitted them for your review, so the button is not available.</p>
+                                                                        <p><img src="./images/help/dot.png" style="width:50px"/> If the time is in <strong style="color:red">RED</strong>, it means that the contractor has entered more time than was reported by the clock. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="review-submitted-reject" class="tab-pane fade" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">Reject Time</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Choose Day, Outage and Contractor</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/reject-1.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5 col-md-6">
+                                                                        <li>Pick Project</li>
+                                                                        <li>Pick Contractor</li>
+                                                                    </ol>
+                                                                </div>
+                                                                <div class="d-lg-flex mt-5 pt-5">
+                                                                    <img src="./images/help/reject-2.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5 col-md-6">
+                                                                        <li>Find the correct date that needs to be rejected. </li>
+                                                                        <li>Click on the name of the contractor.</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: Reject time</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/reject-3.png" style="width: 300px;"/>
+                                                                    <div class="col-md-8">
+                                                                        <ol class="pl-5 ml-5 ">
+                                                                            <li>Scroll through the list of workers to review their hours. </li>
+                                                                            <li>When you find the worker to reject, click the “X” to reject the time and send it back to the foreman for them to correct it. </li>
+                                                                        </ol>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="add-worker-review" class="tab-pane fade" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-3">Add Worker</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 1: Go to Assignment Page</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/worker-1.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5 col-md-6">
+                                                                        <li>Click the dropdown arrow</li>
+                                                                        <li>Click Assignment</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 2: Review Assigned Workers</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/worker-2.png" style="width: 300px;"/>
+                                                                    <div class="col-md-8">
+                                                                        <ol class="pl-5 ml-5 ">
+                                                                            <li>Confirm correct project/outage </li>
+                                                                            <li>Click Add to add a new worker to this project. </li>
+                                                                        </ol>
+                                                                        <div class="pl-5 ml-5 mt-4">
+                                                                            <p><img src="./images/help/date.png" style="width:50px"> The dark blue bar shows the number of workers assigned to this outage. </p>
+                                                                            <p><img src="./images/help/dot.png" style="width:50px"> This has the list of workers assigned. </p>
+                                                                            <p><img src="./images/help/clock.png" style="width:50px"> Worker has timecards for this project. </p>
+                                                                            <p><img src="./images/help/delete.png" style="width:50px"> Remove this worker from this outage</p>
+                                                                            <p><img src="./images/help/worker.png" style="width:50px"> Worker is not trained.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-md-12">
+                                                                <h4>Step 3: Add New Worker</h4>
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/worker-3.png" style="width: 300px;"/>
+                                                                    <div class="col-md-8">
+                                                                        <ol class="pl-5 ml-5 ">
+                                                                            <li>Select Workers to add</li>
+                                                                            <li>Click Save</li>
+                                                                        </ol>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="miscellaneous" role="tabpanel" aria-labelledby="list-login-list">
+                                        <h2 class="mb-3">Miscellaneous Info</h2>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="tab-content">
+                                                    <div id="page-info" class="tab-pane fade show active" role="tabpanel" aria-labelledby="list-login-list">
+                                                        <h3 class="mb-4">Timecard Page Information</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="d-lg-flex">
+                                                                    <img src="./images/help/info.png" style="width: 300px;"/>
+                                                                    <ol class="pl-5 ml-5 col-md-6">
+                                                                        <li>Worker</li>
+                                                                        <li>Date</li>
+                                                                        <li>Shift (sun or moon) and hours from time clock</li>
+                                                                        <li>Activity will always be Unspecified</li>
+                                                                        <li>Hours that can be edited</li>
+                                                                        <li>Not used now</li>
+                                                                        <li>Sum of the total hours entered</li>
+                                                                        <li>If number of ours exceed the clock hours, a reason must be selected.</li>
+                                                                        <li>Text to provide more details on why time was changed.</li>
+                                                                        <li> Button to submit the hours</li>
+                                                                    </ol>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </main>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap-input-spinner.js"></script>        
+        <script src="js/bootstrap-input-spinner.js"></script>   
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/datatables.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
+
